@@ -1,0 +1,211 @@
+
+#banner{
+    background-image: url("/Images/About-Us-Banner.jpg");
+    height: 900px;
+    width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+#banner img{
+    position: absolute;
+    margin-top: -5rem;
+    z-index: 1;
+}
+
+
+#banner figure{
+    padding-top: 300px;
+}
+
+.quote {
+  text-align: center;
+  font-size: min(6vw, 120px);
+  white-space: nowrap;
+  
+}
+  
+.quote blockquote {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .quote p {
+    line-height: 1.1;
+    font-family: 'Amiri', serif;
+    text-transform: uppercase;
+  }
+  .quote p span {
+      display: block;
+    }
+  
+  
+    .quote .cut-text-container {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 0px 50px;
+    
+    animation: moveCutClip 4s cubic-bezier(0.85, 0, 0.15, 1) infinite alternate;
+}
+    
+.quote .cut-text-container .cut-text {
+      background-image: url("/Images/About-Us-Banner.jpg");
+      margin: 0;
+    }
+    
+    .quote .cut-text-container span {
+      color: #000;
+      mix-blend-mode: lighten;
+      background-color: #fff;
+      /* letter-spacing: 15px; */
+    }
+  
+  
+    .quote .colored-text {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: moveTopColoredClip 4s cubic-bezier(0.85, 0, 0.15, 1) infinite alternate;
+}
+    
+.second {
+      top: 50%;
+      animation: moveBottomColoredClip 4s cubic-bezier(0.85, 0, 0.15, 1) infinite alternate;
+    }
+  
+  
+    .quote figcaption {
+    line-height: 0.4;
+  }
+  .quote cite {
+    font-style: normal;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.4em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    
+    animation: fadeInAuthor 4s cubic-bezier(0.85, 0, 0.15, 1) infinite alternate;
+  }
+
+
+@keyframes moveCutClip {
+  0%, 25% {
+    clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 50%, 0% 50%);
+  }
+  75%, 100% {
+    clip-path: polygon(35px 50%, 100% 50%, calc(100% - 35px) 100%, 0% 100%);
+  }
+}
+
+@keyframes moveTopColoredClip {
+  0%, 25% {
+    clip-path: polygon(35px -100%, 100% -100%, calc(100% - 35px) 0%, 0% 0%);
+  }
+  75%, 100% {
+    clip-path: polygon(35px 00%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+  }
+}
+
+@keyframes moveBottomColoredClip {
+  0%, 25% {
+    clip-path: polygon(35px 0%, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+  }
+  75%, 100% {
+    clip-path: polygon(35px 100%, 100% 100%, calc(100% - 35px) 200%, 0% 200%);
+  }
+}
+
+@keyframes fadeInAuthor {
+  0%, 25% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+#container{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.cards{
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  background:linear-gradient(45deg,#254245,#62A894) ;
+  transition: 0.5s;
+}
+.cards:hover{
+  height: 400px;
+}
+#container .cards img{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 350px;
+  transition: 0.5s;
+}
+#container .cards:hover img{
+  left: 80%;
+  height: 400px;
+}
+#container .cards .content{
+  position: relative;
+  width: 50%;
+  left: 20%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px 20px 20px 40px;
+  transition: 0.5s;
+}
+#container .cards:hover .content{
+left: 0;
+opacity: 1;
+visibility:visible;
+}
+#container .cards .content h2{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.2em;
+  line-height: 1em;
+}
+#container .cards .content p{
+  color: #fff;
+}
+#container .cards .content a{
+position: relative;
+color: #254245;
+background-color: #fff;
+display: inline-block;
+padding: 10px 20px;
+margin-top: 10px;
+text-decoration:none ;
+font-weight: 700;
+}
