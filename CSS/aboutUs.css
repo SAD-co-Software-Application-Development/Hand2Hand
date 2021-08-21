@@ -1,6 +1,6 @@
 
 #banner{
-    background-image: url("/Images/About-Us-Banner.jpg");
+    background-image: url("./Images/About-Us-Banner.jpg");
     height: 900px;
     width: 100%;
 background-repeat: no-repeat;
@@ -51,7 +51,7 @@ background-size: cover;
 }
     
 .quote .cut-text-container .cut-text {
-      background-image: url("/Images/About-Us-Banner.jpg");
+      background-image: url("./Images/About-Us-Banner.jpg");
       margin: 0;
     }
     
