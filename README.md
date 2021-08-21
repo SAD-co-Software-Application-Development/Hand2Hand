@@ -23,6 +23,7 @@ BETC Assignment
 
 
 # Reference:
+* [About Us Banner CSS](https://codepen.io/ZachSaucier/pen/RwVdEJO)
 
 
 # version of product: 0.0.0
