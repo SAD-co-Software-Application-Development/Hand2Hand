@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/store.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +63,56 @@
         </nav>
     </header>
     <main>
-        <div style="height: 1000px;"></div>
+        <div style="height: 100px;"></div>
+        <div id="container">
+        <div id="category">
+            <p>Category</p>
+            <ul>
+                <button id="knitting"><li>knitting</li></button>
+                <button id="woodcraft"><li>woodcraft</li></button>
+                <button id="Paintings"><li>Paintings</li></button>
+                <button id="clothes"><li>clothes</li></button>
+            </ul>
+        </div>
+        <div id="product">
+            <ul>
+            <div class="subBanner1">
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt1">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt2">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt3">btn</button>
+            </div>
+            <div class="subBanner2">
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt4">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt5">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder"> 
+                <button id="bt6">btn</button>               
+            </div> 
+            <div class="subBanner3">
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt7">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt8">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt9">btn</button>                
+            </div>
+            <div class="subBanner4">
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt10">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt11">btn</button>
+                <img src="https://via.placeholder.com/202x218/000000" alt="placeholder">
+                <button id="bt12">btn</button>
+            </div>
+            </ul>
+        </div>
+
+    </div>
+        <div style="height: 100px;"></div>
     </main>
     <footer>
         <div class="content">
@@ -124,13 +174,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 100;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
+    
+    <script src="JS/store.js"></script>
 </body>
 
 </html>

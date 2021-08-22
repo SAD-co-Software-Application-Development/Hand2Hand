@@ -1,0 +1,263 @@
+#container{
+    display: flex;
+}
+
+#category {
+    border-color: black;
+}
+
+#category button {
+    display: block;
+    padding-bottom: 10;    
+    background-color: #2F5D62;
+    color: #DFEEEA;
+    border-color: #5E8B7E;
+    border-radius: 8px;
+    
+}
+
+#catId {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+}
+
+#bt1 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt2 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt3 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt4 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt5 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt6 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt7 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt8 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt9 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt10 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt11 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+#bt12 {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: larger;
+    margin-left: -235px;
+    margin-top: 100px;
+}
+
+.subBanner1 img:hover + #bt1, #bt1:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner1 img:hover + #bt2, #bt2:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner1 img:hover + #bt3, #bt3:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner2 img:hover + #bt4, #bt4:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner2 img:hover + #bt5, #bt5:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner2 img:hover + #bt6, #bt6:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner3 img:hover + #bt7, #bt7:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner3 img:hover + #bt8, #bt8:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner3 img:hover + #bt9, #bt9:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner4 img:hover + #bt10, #bt10:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner4 img:hover + #bt11, #bt11:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+.subBanner4 img:hover + #bt12, #bt12:hover {
+    transition: 1s;
+    visibility: visible;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+
+/* #product {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.subBanner1 {    
+    /* float: right; */
+    /* display: inline-block; */
+    margin-left: 150px;
+}
+
+.subBanner2 {
+    /* float: right; */
+    /* display: inline-block; */
+    margin-left: 150px;
+}
+
+.subBanner3 {
+    /* margin-left: 106px;
+    display: inline-block; */
+    margin-left: 150px;
+}
+
+.subBanner4 {
+    /* margin-left: 106px;
+    display: inline-block; */
+    margin-left: 150px;
+}
+
+
+.subBanner1 img {
+    margin-right: 80px;
+    padding-bottom: 10px;
+    height: 250px;
+    width: 250px;
+}
+.subBanner2 img {
+    margin-right: 80px;
+    padding-bottom: 10px;
+    height: 250px;
+    width: 250px;
+}
+.subBanner3 img {
+    margin-right: 80px;
+    padding-bottom: 10px;
+    height: 250px;
+    width: 250px;
+}
+.subBanner4 img {
+    margin-right: 80px;
+    padding-bottom: 10px;
+    height: 250px;
+    width: 250px;;
+}
