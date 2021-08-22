@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/store.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +63,56 @@
         </nav>
     </header>
     <main>
-        <div style="height: 1000px;"></div>
+        <div style="height: 100px;"></div>
+        <div id="container">
+        <div id="category">
+            <h2>Category</h2>
+            <ul>
+                <button id="knitting"><li>knitting</li></button>
+                <button id="woodcraft"><li>woodcraft</li></button>
+                <button id="Paintings"><li>Paintings</li></button>
+                <button id="clothes"><li>clothes</li></button>
+            </ul>
+        </div>
+        <div id="product">
+            <ul>
+            <div class="subBanner1">
+                <img src="https://i2.wp.com/www.tareqah.com/wp-content/uploads/2017/09/Fashion-jewelry-handmade-accessories-feather-red-string-knitted-bracelet.jpg?ssl=1" alt="placeholder">
+                <button id="bt1">btn</button>
+                <img src="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/67101/1.jpg?7288" alt="placeholder">
+                <button id="bt2">btn</button>
+                <img src="https://static.straitstimes.com.sg/s3fs-public/styles/article_pictrure_780x520_/public/articles/2020/12/10/ak_k1_1012.jpg?itok=BbNzgrxC&timestamp=1607585693" alt="placeholder">
+                <button id="bt3">btn</button>
+            </div>
+            <div class="subBanner2">
+                <img src="https://i.ytimg.com/vi/0jyq1213OoI/maxresdefault.jpg" alt="placeholder">
+                <button id="bt4">btn</button>
+                <img src="https://www.arageek.com/wp-content/uploads/ibda3world/2010/04/3-1-1.jpg" alt="placeholder">
+                <button id="bt5">btn</button>
+                <img src="https://asset2.cxnmarksandspencer.com/is/image/mands/1715_20191122_WW_Accessories_SB-22013_7?$editorial_380x285$" alt="placeholder"> 
+                <button id="bt6">btn</button>               
+            </div> 
+            <div class="subBanner3">
+                <img src="https://rukminim1.flixcart.com/image/714/857/k7m8brk0/t-shirt/d/t/q/4xl-rc90tshirtwhite-roden-original-imafptpa8zgpjrrx.jpeg?q=50" alt="placeholder">
+                <button id="bt7">btn</button>
+                <img src="https://cdn.shoplo.com/83403187/products/th640/aaa5/326-liberty-print-tana-lawn-and-silk-masks-2-1.jpeg" alt="placeholder">
+                <button id="bt8">btn</button>
+                <img src="https://i.pinimg.com/474x/57/ed/fb/57edfba2e5f9bb75f8835ccd3b0118b6.jpg" alt="placeholder">
+                <button id="bt9">btn</button>                
+            </div>
+            <div class="subBanner4">
+                <img src="https://rukminim1.flixcart.com/image/714/857/kflftzk0-0/t-shirt/n/r/k/xl-fc4054-fastcolors-original-imafwyf6dy5fggqu.jpeg?q=50" alt="placeholder">
+                <button id="bt10">btn</button>
+                <img src="https://assets.ajio.com/medias/sys_master/root/20210514/T01n/609e7c45f997ddb3129e999c/-473Wx593H-461571257-blue-MODEL.jpg" alt="placeholder">
+                <button id="bt11">btn</button>
+                <img src="https://furorjeans.com/media/catalog/product/cache/c897b16eaf63d0c4ea2adbb8515b687c/uploads/IMG_9139-FMTBF20-006.jpg" alt="placeholder">
+                <button id="bt12">btn</button>
+            </div>
+            </ul>
+        </div>
+
+    </div>
+        <div style="height: 100px;"></div>
     </main>
     <footer>
         <div class="content">
@@ -124,13 +174,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 100;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
+    
+    <script src="JS/store.js"></script>
 </body>
 
 </html>
