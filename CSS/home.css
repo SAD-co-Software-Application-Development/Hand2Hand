@@ -1,14 +1,272 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   font-family: 'Lobster', cursive;
+}
+
+
+
+main{
+    padding-top: 5vw;
+    width: 100%;
+    /* background: radial-gradient(rgb(186, 219, 198),#b6ccb4); */
+
+    
+}
+#box{
+    height: 500px;
+    width: 80%;
+    background-color: white;
+    opacity: 0.5;
+    position: relative;
+    z-index: 1;
+    border-radius:30px;
+    box-shadow: 0 1px 2px 0 rgba(37, 66, 69, 0.2),0 1px 15px 0 rgba(37, 66, 69, 0.3);
+}
+
+.row1{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 250px;
+    width: 100%;
+
+}
+.row{
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    width: 100%;
+    
+}
+
+.col-2{
+    position: relative;
+    flex-basis: 50%;
+    min-width: 300px;
+    padding-left: 5vw;
+    margin-top: -500px;
+    z-index: 2;
+}
+
+.col-2 h1{
+    font-size: 60px;
+    line-height: 60px;
+    margin: 25px 0;
+    font-family: 'Lobster', cursive;
+}
+
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 10px 40px;
+    margin: 30px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.5s;
+    font-size: 25px;
+}
+
+main .aheader{
+    box-shadow: 0 1px 2px 0 rgba(37, 66, 69, 0.2),0 1px 15px 0 rgba(37, 66, 69, 0.3);
+    background-image: url(../Images/home-baner.jpg);
+    height: 800px;
+    margin-top: -200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col-2 p{
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background: #563434;
+
+
+}
+
+
+
+/* ---------- Best Seller ----------- */
+
+  .all{
+      background-color: #DFEEEA;
+      width: 100%;
+      height: 650px;
+  }
+
+  .all h1{
+      padding-left: 30px;
+      padding-top: 30px;
+      font-size: 40px;
+  }
+
+  .container {
+    position: relative;
+    width: 320px;
+    margin: 0px auto 0 auto;
+    perspective: 1000px;
+    padding-top: 100px;
+    
+    
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    /* box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5); */
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://i2.wp.com/www.tareqah.com/wp-content/uploads/2017/09/Fashion-jewelry-handmade-accessories-feather-red-string-knitted-bracelet.jpg?ssl=1");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/67101/1.jpg?7288");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://static.straitstimes.com.sg/s3fs-public/styles/article_pictrure_780x520_/public/articles/2020/12/10/ak_k1_1012.jpg?itok=BbNzgrxC&timestamp=1607585693");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://i.ytimg.com/vi/0jyq1213OoI/maxresdefault.jpg");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://www.arageek.com/wp-content/uploads/ibda3world/2010/04/3-1-1.jpg");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://rukminim1.flixcart.com/image/714/857/k7m8brk0/t-shirt/d/t/q/4xl-rc90tshirtwhite-roden-original-imafptpa8zgpjrrx.jpeg?q=50");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://assets.ajio.com/medias/sys_master/root/20210514/T01n/609e7c45f997ddb3129e999c/-473Wx593H-461571257-blue-MODEL.jpg");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://cdn.shoplo.com/83403187/products/th640/aaa5/326-liberty-print-tana-lawn-and-silk-masks-2-1.jpeg");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://i.pinimg.com/474x/57/ed/fb/57edfba2e5f9bb75f8835ccd3b0118b6.jpg");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+
+/* ----------- for paragraph2 ---------- */
+
+.paragraph2{
+
+    padding: 80px;
+    
+}
+
+.FinalP h1{
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#secondP{
+    padding: 25px;
+    font-size: 30px;
+}
 
 
 
 
+  
+/* ---------  new products ---------- */
+  .categories{
+      margin: 0 0;
+      
+      background-color: #DFEEEA;
+  }
+  
+
+  .col-3{
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+  }
+
+  .col-3 img{
+      
+      width: 100%;
+  }
+
+/* ---------  Featured products  -------- */
+
+  .small-container{
+      
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+      
+  }
 
 
+.col-4{
+    flex-basis: 25%;
+    padding-left: 50px;
+    min-width: 200px;
+    margin-bottom: 50px;
+   
+}
 
+.col-4 img{
 
+    width: 100%;
+    
+}
 
+.small-container h1{
+padding-top: 35px;
+    font-size: 40px;
+}
 
+.col-4 h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    
+}
 
+.col-4 p{
+    padding-top: 10px;
+    
+}
 
 
 
