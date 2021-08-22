@@ -1,0 +1,70 @@
+#container{
+    display: flex;
+}
+
+#category {
+    border-color: black;
+}
+
+#category button {
+    display: block;
+    padding-bottom: 10;    
+    background-color: #2F5D62;
+    color: #DFEEEA;
+    border-color: #5E8B7E;
+    border-radius: 8px;
+    
+}
+
+#catId {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+}
+
+
+.subBanner1 {    
+    margin-left: 106px;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.subBanner2 {
+    margin-left: 106px; ;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.subBanner3 {
+    margin-left: 106px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.subBanner4 {
+    margin-left: 106px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+
+.subBanner1 img {
+    padding-bottom: 10px;
+    height: 500px;
+    width: 500px;
+}
+.subBanner2 img {
+    padding-bottom: 10px;
+    height: 500px;
+    width: 500px;
+}
+.subBanner3 img {
+    padding-bottom: 10px;
+    height: 500px;
+    width: 500px;
+}
+.subBanner4 img {
+    padding-bottom: 10px;
+    height: 500px;
+    width: 500px;;
+}
