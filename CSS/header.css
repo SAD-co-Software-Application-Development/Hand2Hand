@@ -5,6 +5,7 @@ nav a{
     text-decoration: none;
     color: white  ;
     margin-left: 20px;
+    font-size: 1vw;
 }
 #navList a li{
     width: 160%;
@@ -43,13 +44,13 @@ border: none;
     width: 20%;
 }
 #logoImg{
-    width: 5rem;
+    width: 5vw;
 }
 #logoTitel{
-    margin-top: 0.8rem;
+    margin-top: 0.8vw;
 }
 #logoH1Titel{
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 600;
     font-family: 'Lobster', cursive;
     color: white;
@@ -58,9 +59,9 @@ border: none;
     font-family: 'Lobster', cursive;
     font-style: italic;
     opacity: 0.6;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     color: white;
-    letter-spacing: 0.23rem;
+    letter-spacing: 0.23vw;
 }
 header nav{
     display: flex;
@@ -71,10 +72,10 @@ header nav{
 }
 #searchBar{
     width: 85%;
-    border-radius: 1rem 0 0 0;
-    border: 0.15rem solid #62A894;
-    margin-top: 1.3rem;
-    height: 2rem;
+    border-radius: 1vw 0 0 0;
+    border: 0.15vw solid #62A894;
+    margin-top: 1.3vw;
+    height: 2vw;
 }
 #searchBar:focus{
     outline: none !important;
@@ -84,29 +85,29 @@ header nav{
     border: none;
     color: tomato;
     width: 10%;
-    height: 2rem;
-    border: 0.15rem solid #62A894;
-    border-radius: 0 0 1rem 0;
+    height: 2vw;
+    border: 0.15vw solid #62A894;
+    border-radius: 0 0 1vw 0;
     border-left: none;
 }
 #searchBTN:hover{
     background-color: tomato;
     border: none;
     color: white;
-    border-radius: 0.2rem;
-    border-radius: 0 0 1rem 0;
+    border-radius: 0.2vw;
+    border-radius: 0 0 1vw 0;
 }
 #navList{
     display: flex;
     /* justify-content: space-between; */
     width: 40%;
-    line-height: 4.5rem;
-    padding: 0 1rem;
+    line-height: 4.5vw;
+    padding: 0 1vw;
     font-size: 120%;
     text-align: center;
 }
 #navList > * + *{
-    margin-left: 4rem;
+    margin-left: 4vw;
 }
 #navList li{
     width: 25%;
