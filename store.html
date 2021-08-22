@@ -65,13 +65,50 @@
         <div style="height: 1000px;"></div>
         <div id="category">
             <ul>
-                <button><li>1st</li></button>
-                <button><li>2nd</li></button>
-                <button><li>3rd</li></button>
-                <button><li>4th</li></button>
+                <button id="accessories"><li>Accessories</li></button>
+                <button id="woodcraft"><li>Woodcraft</li></button>
+                <button id="cooking"><li>Cooking</li></button>
+                <button id="pottery"><li>Pottery</li></button>
             </ul>
         </div>
-        <div id="product"></div>
+        <div id="product">
+            <div>
+                <h2 id="storeHeader"></h2>
+                <p id="storeParagraph"></p>
+            </div>
+            <div>
+                <img id="1st" src="" alt="">
+                <div>
+                    <h4></h4>
+                    <button id="remove">-</button>
+                    <p>0</p>
+                    <button id="add">+</button>
+                </div>
+                <img id="2nd" src="" alt="">
+                <h4></h4>
+                <img id="3rd" src="" alt="">
+                <h4></h4>
+                <img id="4th" src="" alt="">
+                <h4></h4>
+                <img id="5th" src="" alt="">
+                <h4></h4>
+                <img id="6th" src="" alt="">
+                <h4></h4>
+                <img id="7th" src="" alt="">
+                <h4></h4>
+                <img id="8th" src="" alt="">
+                <h4></h4>
+                <img id="9th" src="" alt="">
+                <h4></h4>
+                <img id="10th" src="" alt="">
+                <h4></h4>
+                <img id="11th" src="" alt="">
+                <h4></h4>
+                <img id="12th" src="" alt="">
+                <h4></h4>
+                
+            </div>
+        </div>
     </main>
     <footer>
         <div class="content">
@@ -133,13 +170,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 100;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
+    
+    <script src="JS/store.js"></script>
 </body>
 
 </html>
