@@ -6,6 +6,18 @@
     border-color: black;
 }
 
+#category h2 {
+    text-align: center;
+    width: 100%;
+    background-color: #2F5D62; 
+    border-radius: 20px;
+    color: #DFEEEA;
+    border-color: #5E8B7E;
+    font-weight: 600;
+    padding-top: 5px;
+    height: 25px;
+}
+
 #category button {
     display: block;
     padding-bottom: 10;    
@@ -16,7 +28,9 @@
     
 }
 
-#catId {
+#knitting,#woodcraft,#Paintings,#clothes {
+    font-weight: 400;
+    font-style:oblique ;
     width: 150px;
     height: 100px;
     text-align: center;
