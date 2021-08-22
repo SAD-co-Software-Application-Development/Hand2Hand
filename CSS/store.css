@@ -1,0 +1,7 @@
+#category button {
+    border: 1px solid green;
+    padding: 100px;
+    cursor: pointer; 
+    width: 13%;
+    display: block; 
+}
