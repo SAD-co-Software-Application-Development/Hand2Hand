@@ -16,6 +16,7 @@ function loadDataToCart() {
   let tableBody = document.getElementById('tableBody');
   tableBody.textContent = ''
   totalOfTotals = 0
+  if(itemArray != null){
   for (let i = 0; i < itemArray.length; i++) {
 
     let trEl = document.createElement('tr');
@@ -39,7 +40,7 @@ function loadDataToCart() {
     // removeBtnEl.textContent = '-'
 
     let minusIcon = document.createElement('i');
-    minusIcon.className = "fas fa-minus-circle"
+    minusIcon.className = "fas fa-minus-circle fa-2x"
     removeBtnEl.appendChild(minusIcon)
 
     removeBtnEl.addEventListener('click', removeQuantity)
@@ -52,9 +53,9 @@ function loadDataToCart() {
         itemArray[i].ordered--
         pEl.textContent = itemArray[i].ordered
         total = itemArray[i].price.split(' ')[0] * Number(pEl.textContent);
-        tdEl4.textContent = total;
+        tdEl4.textContent = `${total} $`;
         totalOfTotals -=total/itemArray[i].ordered
-    tdEl7.textContent = totalOfTotals
+    tdEl7.textContent = `${totalOfTotals} $`
 
         saveToLocalStorage()
        
@@ -73,7 +74,7 @@ function loadDataToCart() {
     // addBtnEl.textContent = '+' 
 
     let plusIcon = document.createElement('i');
-    plusIcon.className = "fas fa-plus-circle"
+    plusIcon.className = "fas fa-plus-circle fa-2x"
     addBtnEl.appendChild(plusIcon)
 
     addBtnEl.addEventListener('click', addQuantity)
@@ -82,9 +83,9 @@ function loadDataToCart() {
       itemArray[i].ordered++
       pEl.textContent = Number(itemArray[i].ordered)
       total = itemArray[i].price.split(' ')[0] * Number(pEl.textContent);
-      tdEl4.textContent = total;
+      tdEl4.textContent = `${total} $`;
       totalOfTotals +=total/itemArray[i].ordered
-    tdEl7.textContent = totalOfTotals
+    tdEl7.textContent = `${totalOfTotals} $`
       
       saveToLocalStorage()
 
@@ -97,7 +98,7 @@ function loadDataToCart() {
     total = itemArray[i].price.split(' ')[0] * Number(pEl.textContent);
     let tdEl4 = document.createElement('td');
     trEl.appendChild(tdEl4);
-    tdEl4.textContent = total;
+    tdEl4.textContent = `${total} $`;
     totalOfTotals += total
 
     let tdEl5 = document.createElement('td');
@@ -105,7 +106,7 @@ function loadDataToCart() {
     let removeBtnEl1 = document.createElement('button');
     // removeBtnEl1.textContent = 'asda';
     let removeIcone = document.createElement('i')
-    removeIcone.className = 'fas fa-trash-alt'
+    removeIcone.className = 'fas fa-trash-alt fa-2x'
     removeBtnEl1.appendChild(removeIcone)
     removeIcone.id = `rem${i}`
     removeBtnEl1.id = `del${i}`;
@@ -118,19 +119,29 @@ function loadDataToCart() {
     
 
   }
+}
   let tableFooter = document.getElementById('tableFooter')
     tableFooter.textContent = ""
 
     let trEl1 = document.createElement('tr');
     tableFooter.appendChild(trEl1);
 
+    let tdEl8 = document.createElement('td');
+    trEl1.appendChild(tdEl8);
+
     let tdEl6 = document.createElement('td');
     trEl1.appendChild(tdEl6);
     tdEl6.textContent = 'TOTAL OF TOTALS'
+    
+    let tdEl9 = document.createElement('td');
+    trEl1.appendChild(tdEl9);
 
     let tdEl7 = document.createElement('td');
     trEl1.appendChild(tdEl7);
-    tdEl7.textContent = totalOfTotals
+    tdEl7.textContent = `${totalOfTotals} $`
+
+    let tdEl10 = document.createElement('td');
+    trEl1.appendChild(tdEl10);
 }
 loadDataToCart();
 
@@ -160,4 +171,16 @@ window.addEventListener('scroll', function () {
 function saveToLocalStorage(){
   let data = JSON.stringify(itemArray)
   localStorage.setItem('products',data)
+}
+
+
+let cancel = document.getElementById('cancel');
+cancel.addEventListener('click', removeAllItems );
+
+function removeAllItems(event) {
+  let clearTable = document.getElementById('tableBody');
+  clearTable.textContent = "";
+  localStorage.clear()
+  itemArray = [];
+  loadDataToCart();
 }
