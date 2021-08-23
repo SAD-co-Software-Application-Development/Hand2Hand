@@ -75,6 +75,7 @@ header{
     padding-bottom: 20px;
     font-size: large;
     font-weight: 600;
+
 }
 
 #tableBody td:nth-child(5) button {
@@ -93,3 +94,36 @@ legend {
     font-weight: 800;
     font-size: xx-large;
 }
+
+
+#tableButton {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#tableButton button {
+    /* padding-bottom: 10;    
+    background-color: #2F5D62;
+    color: #DFEEEA;
+    border-color: #5E8B7E;
+    border-radius: 8px;
+    width: 150px;
+    height: 70px; */
+    
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 10px 40px;
+    margin: 30px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.5s;
+    font-size: 25px;
+}
+#tableButton button:hover{
+    background: #563434;
+
+
+}
+

@@ -16,6 +16,7 @@ function loadDataToCart() {
   let tableBody = document.getElementById('tableBody');
   tableBody.textContent = ''
   totalOfTotals = 0
+  if(itemArray != null){
   for (let i = 0; i < itemArray.length; i++) {
 
     let trEl = document.createElement('tr');
@@ -118,6 +119,7 @@ function loadDataToCart() {
     
 
   }
+}
   let tableFooter = document.getElementById('tableFooter')
     tableFooter.textContent = ""
 
@@ -169,4 +171,16 @@ window.addEventListener('scroll', function () {
 function saveToLocalStorage(){
   let data = JSON.stringify(itemArray)
   localStorage.setItem('products',data)
+}
+
+
+let cancel = document.getElementById('cancel');
+cancel.addEventListener('click', removeAllItems );
+
+function removeAllItems(event) {
+  let clearTable = document.getElementById('tableBody');
+  clearTable.textContent = "";
+  localStorage.clear()
+  itemArray = [];
+  loadDataToCart();
 }
