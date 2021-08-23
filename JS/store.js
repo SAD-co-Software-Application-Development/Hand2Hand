@@ -7,7 +7,7 @@ let chosenToCart = []
 
 function Product(path, price, category= null, id){
     this.name=path.split('.')[0];
-    this.path = 'Images/Products/'+path;
+    this.path = './Images/Products/'+path;
     this.price = `${price} $`;
     this.category = path.split('.')[1];
     this.ordered = 1;
