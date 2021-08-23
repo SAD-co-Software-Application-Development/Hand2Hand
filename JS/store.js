@@ -109,7 +109,7 @@ function saveLocal(){
 }
 
 
-knitting.addEventListener('click',filter)
+knitting.addEventListener('click',filter);
 
 function filter(){
 
