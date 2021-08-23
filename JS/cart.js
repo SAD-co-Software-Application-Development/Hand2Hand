@@ -104,11 +104,12 @@ function loadDataToCart() {
     trEl.appendChild(tdEl5);
     let removeBtnEl1 = document.createElement('button');
     // removeBtnEl1.textContent = 'asda';
-    let qweqe = document.createElement('i')
-    qweqe.className = 'fas fa-trash-alt'
-    removeBtnEl1.appendChild(qweqe)
+    let removeIcone = document.createElement('i')
+    removeIcone.className = 'fas fa-trash-alt'
+    removeBtnEl1.appendChild(removeIcone)
+    removeIcone.id = `rem${i}`
     removeBtnEl1.id = `del${i}`;
-    removeBtnEl1.className = ''
+    // removeBtnEl1.className = ''
     removeBtnEl1.addEventListener('click', handleRemove)
     tdEl5.appendChild(removeBtnEl1);
     console.log(itemArray[i].price.split(' ')[0]);
