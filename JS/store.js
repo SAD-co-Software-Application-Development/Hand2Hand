@@ -3,7 +3,17 @@
 let productArr =[];
 let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg','blouse-white.clothes.jpeg','bloyse-mixed-color.clothes.jpeg','bracelet.accessories.jpg','chicken-burger.cooking.jpg','Earring.accessories.webp','Fashion-jewelry.knitting.jpg','Facemask.knitting.jpeg','Sophie.woodcraft.jpg','Wool-cap.woolcraft.jpg','Chocolate-Cake.cooking.jpg']
 let parent = document.getElementById('product')
-let chosenToCart = []
+let chosenToCart = [];
+
+function loadLocal() {
+  let stringData = localStorage.getItem('products');
+  if(stringData){
+
+    let loadedData = JSON.parse(stringData);
+    chosenToCart = loadedData;
+  }
+}
+loadLocal();
 
 function Product(path, price, category= null, id){
     this.name=path.split('.')[0];
@@ -26,6 +36,8 @@ parent.appendChild(btn);
 btn.textContent ='add to cart';
 btn.id = `bt${i+1}`;
 btn.className = 'btnStyling'
+let btnAdd = document.getElementById(`bt${i+1}`)
+btnAdd.addEventListener('click', handleCart)
 }
 
 function getRandomIntInclusive(min, max) {
@@ -45,15 +57,18 @@ let random = getRandomIntInclusive(5,50)
     }
 }
 renderImages()
+// let btnAdd = document.getElementsByClassName('btnStyling')
+// btnAdd.addEventListener('click', handleCart)
 
-
-parent.addEventListener('click', handleCart)
 
 function handleCart(e){
     let chosenProduct = e.target.id;
     console.log(1111111,chosenProduct)
     chosenProduct = chosenProduct.split('t')[1]
+    console.log(productArr)
+    console.log(chosenProduct-1)
     console.log(22222222, productArr[chosenProduct-1])
+console.log(chosenToCart)
     chosenToCart.push(productArr[chosenProduct-1])
     saveToLocalStorage()
 }

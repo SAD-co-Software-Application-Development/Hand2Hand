@@ -2,3 +2,128 @@ main{
     padding-top: 15vw;
 }
 
+header{
+    background-color: #DFEEEA;
+}
+
+#logoH1Titel{
+ color: #254245; 
+}
+#logoH3Titel{
+    color:#62A894;
+}
+#navList a{
+    color: #254245;
+}
+
+#cartTable {
+    overflow: hidden;
+    border-radius: 1vw;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cartTable tr th {
+    background-color: #c7ebe1;
+    width: 200px;
+    padding: 20px 0;
+    font-size: large;
+    font-weight: 700;
+}
+
+#cartTable tr td {
+    vertical-align: middle;
+    width: 200px;
+    text-align: center;
+    margin-top: 100px;
+    border-bottom: 1px solid black;
+}
+
+#tableBody td:nth-child(1) img {
+    width: 10vw;
+    height: 12vw;
+}
+
+#tableBody td:nth-child(3) {
+    display: flex;
+    padding-bottom: 6vw;
+    justify-content: space-between;
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tableBody td:nth-child(3) button {
+    background-color: transparent ;
+    border: none;
+    
+}
+#tableBody td:nth-child(3) button i {
+    margin-left: -6px;
+    margin-top: -4px;
+}
+
+#tableBody td:nth-child(3) button i:hover {
+    color: tomato;
+    transition: 0.3s;
+}
+
+#tableFooter td {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: large;
+    font-weight: 600;
+
+}
+
+#tableBody td:nth-child(5) button {
+    background-color: transparent;
+    border: none;
+}
+
+#tableBody td:nth-child(5) button i:hover {
+    color: tomato;
+    transition: 0.3s;
+}
+
+legend {
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+
+#tableButton {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#tableButton button {
+    /* padding-bottom: 10;    
+    background-color: #2F5D62;
+    color: #DFEEEA;
+    border-color: #5E8B7E;
+    border-radius: 8px;
+    width: 150px;
+    height: 70px; */
+    
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 10px 40px;
+    margin: 30px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.5s;
+    font-size: 25px;
+}
+#tableButton button:hover{
+    background: #563434;
+
+
+}
+
