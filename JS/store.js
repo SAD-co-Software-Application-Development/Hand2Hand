@@ -20,7 +20,7 @@ let bt10 = document.getElementById('bt10');
 let bt11 = document.getElementById('bt11');
 let bt12 = document.getElementById('bt12');
 let knitting = document.getElementById('knitting');
-let subBanner1 = document.getElementsByClassName('subBanner1')
+let subBanner1 = document.getElementsByClassName('subBanner1');
 
 let itemArray = [];
 
@@ -35,7 +35,7 @@ bt1.addEventListener('click',bt1F);
 function bt1F(){
   new Items('https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/67101/1.jpg?7288','10 $');
   saveLocal();
-  console.log(itemArray)
+  console.log(itemArray);
 }
 
 bt2.addEventListener('click',bt2F);
@@ -109,7 +109,7 @@ function saveLocal(){
 }
 
 
-knitting.addEventListener('click',filter)
+knitting.addEventListener('click',filter);
 
 function filter(){
 
