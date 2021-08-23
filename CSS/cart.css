@@ -75,6 +75,7 @@ header{
     padding-bottom: 20px;
     font-size: large;
     font-weight: 600;
+
 }
 
 #tableBody td:nth-child(5) button {
@@ -125,3 +126,4 @@ legend {
 
 
 }
+

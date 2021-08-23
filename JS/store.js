@@ -36,6 +36,8 @@ parent.appendChild(btn);
 btn.textContent ='add to cart';
 btn.id = `bt${i+1}`;
 btn.className = 'btnStyling'
+let btnAdd = document.getElementById(`bt${i+1}`)
+btnAdd.addEventListener('click', handleCart)
 }
 
 function getRandomIntInclusive(min, max) {
@@ -55,9 +57,9 @@ let random = getRandomIntInclusive(5,50)
     }
 }
 renderImages()
+// let btnAdd = document.getElementsByClassName('btnStyling')
+// btnAdd.addEventListener('click', handleCart)
 
-
-parent.addEventListener('click', handleCart)
 
 function handleCart(e){
     let chosenProduct = e.target.id;
