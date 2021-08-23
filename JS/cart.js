@@ -33,11 +33,13 @@ function loadDataToCart() {
     trEl.appendChild(tdEl3);
     let removeBtnEl = document.createElement('button');
     tdEl3.appendChild(removeBtnEl);
+    removeBtnEl.textContent = '-'
     let pEl = document.createElement('p');
     tdEl3.appendChild(pEl);
-    pEl.textContent = 10;
+    pEl.textContent = 1;
     let addBtnEl = document.createElement('button');
     tdEl3.appendChild(addBtnEl);
+    addBtnEl.textContent= '+'
 
 
     let total = 0;
