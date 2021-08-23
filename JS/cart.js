@@ -1,7 +1,8 @@
 'use strict';
 /* eslint-disable */
 
-
+let total
+let totalOfTotals = 0
 let itemArray = [];
 
 function loadLocal() {
@@ -13,7 +14,8 @@ loadLocal();
 
 function loadDataToCart() {
   let tableBody = document.getElementById('tableBody');
-  tableBody.textContent=''
+  tableBody.textContent = ''
+  totalOfTotals = 0
   for (let i = 0; i < itemArray.length; i++) {
 
     let trEl = document.createElement('tr');
@@ -23,7 +25,7 @@ function loadDataToCart() {
     trEl.appendChild(tdEl1);
     let imgEl1 = document.createElement('img');
     tdEl1.appendChild(imgEl1);
-    imgEl1.setAttribute('src',itemArray[i].path);
+    imgEl1.setAttribute('src', itemArray[i].path);
 
     let tdEl2 = document.createElement('td');
     trEl.appendChild(tdEl2);
@@ -31,46 +33,120 @@ function loadDataToCart() {
 
     let tdEl3 = document.createElement('td');
     trEl.appendChild(tdEl3);
+
     let removeBtnEl = document.createElement('button');
     tdEl3.appendChild(removeBtnEl);
-    removeBtnEl.textContent = '-'
+    // removeBtnEl.textContent = '-'
+
+    let minusIcon = document.createElement('i');
+    minusIcon.className = "fas fa-minus-circle"
+    removeBtnEl.appendChild(minusIcon)
+
+    removeBtnEl.addEventListener('click', removeQuantity)
+    function removeQuantity(e) {
+      if (pEl.textContent === '1') {
+        console.log(itemArray[i].ordered, pEl.textContent)
+        pEl.textContent = itemArray[i].ordered
+        removeBtnEl.removeEventListener('click', removeQuantity)
+      } else {
+        itemArray[i].ordered--
+        pEl.textContent = itemArray[i].ordered
+        total = itemArray[i].price.split(' ')[0] * Number(pEl.textContent);
+        tdEl4.textContent = total;
+        totalOfTotals -=total/itemArray[i].ordered
+    tdEl7.textContent = totalOfTotals
+
+        saveToLocalStorage()
+       
+
+        console.log(itemArray[i].ordered, pEl.textContent)
+      }
+    }
+
     let pEl = document.createElement('p');
     tdEl3.appendChild(pEl);
-    pEl.textContent = 1;
+    pEl.textContent = itemArray[i].ordered;
+    itemArray[i].ordered = pEl.textContent
+
     let addBtnEl = document.createElement('button');
     tdEl3.appendChild(addBtnEl);
-    addBtnEl.textContent= '+'
+    // addBtnEl.textContent = '+' 
+
+    let plusIcon = document.createElement('i');
+    plusIcon.className = "fas fa-plus-circle"
+    addBtnEl.appendChild(plusIcon)
+
+    addBtnEl.addEventListener('click', addQuantity)
+    function addQuantity(e) {
+      removeBtnEl.addEventListener('click', removeQuantity)
+      itemArray[i].ordered++
+      pEl.textContent = Number(itemArray[i].ordered)
+      total = itemArray[i].price.split(' ')[0] * Number(pEl.textContent);
+      tdEl4.textContent = total;
+      totalOfTotals +=total/itemArray[i].ordered
+    tdEl7.textContent = totalOfTotals
+      
+      saveToLocalStorage()
+
+      console.log(itemArray[i].ordered, pEl.textContent, total)
+
+    }
 
 
-    let total = 0;
+
     total = itemArray[i].price.split(' ')[0] * Number(pEl.textContent);
     let tdEl4 = document.createElement('td');
     trEl.appendChild(tdEl4);
     tdEl4.textContent = total;
+    totalOfTotals += total
 
     let tdEl5 = document.createElement('td');
     trEl.appendChild(tdEl5);
     let removeBtnEl1 = document.createElement('button');
-    removeBtnEl1.textContent = 'Remove';
+    // removeBtnEl1.textContent = 'asda';
+    let qweqe = document.createElement('i')
+    qweqe.className = 'fas fa-trash-alt'
+    removeBtnEl1.appendChild(qweqe)
     removeBtnEl1.id = `del${i}`;
+    removeBtnEl1.className = ''
     removeBtnEl1.addEventListener('click', handleRemove)
     tdEl5.appendChild(removeBtnEl1);
     console.log(itemArray[i].price.split(' ')[0]);
+    
+
+    
 
   }
+  let tableFooter = document.getElementById('tableFooter')
+    tableFooter.textContent = ""
+
+    let trEl1 = document.createElement('tr');
+    tableFooter.appendChild(trEl1);
+
+    let tdEl6 = document.createElement('td');
+    trEl1.appendChild(tdEl6);
+    tdEl6.textContent = 'TOTAL OF TOTALS'
+
+    let tdEl7 = document.createElement('td');
+    trEl1.appendChild(tdEl7);
+    tdEl7.textContent = totalOfTotals
 }
 loadDataToCart();
 
-function handleRemove(e){
-  console.log(33333333333333,e.target.id)
+
+
+function handleRemove(e) {
+  console.log(33333333333333, e.target.id)
   let deleteId = e.target.id;
-  deleteId= deleteId.split('')[3];
+  deleteId = deleteId.split('')[3];
   console.log(itemArray[deleteId])
   itemArray.splice(deleteId, 1)
-  console.log(4444444444444,itemArray)
+  console.log(4444444444444, itemArray)
   localStorage.setItem('products', JSON.stringify(itemArray))
   loadLocal();
   loadDataToCart();
+  // totalOfTotals = total
+  console.log(totalOfTotals,total)
   // window.location.reload();
 }
 
@@ -79,3 +155,8 @@ window.addEventListener('scroll', function () {
   let windowPosition = window.scrollY > 100;
   header.classList.toggle('scrolling-active', windowPosition);
 });
+
+function saveToLocalStorage(){
+  let data = JSON.stringify(itemArray)
+  localStorage.setItem('products',data)
+}
