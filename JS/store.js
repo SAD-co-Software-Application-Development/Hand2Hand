@@ -141,3 +141,95 @@ window.addEventListener('scroll', function () {
   let windowPosition = window.scrollY > 100;
   header.classList.toggle('scrolling-active', windowPosition);
 });
+
+let allItems = document.getElementById('allItems')
+allItems.addEventListener('click',allItemsHandel)
+
+function allItemsHandel(e){
+  parent.textContent = ""
+  renderImages()
+}
+
+let knittingItem = document.getElementById('knitting')
+knitting.addEventListener('click',knittingHandel)
+
+function knittingHandel(e){
+  parent.textContent = ""
+  function renderKnitting() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'knitting'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderKnitting()
+  
+}
+
+let woodcraftItem = document.getElementById('woodcraft')
+woodcraft.addEventListener('click',woodcraftHandel)
+
+function woodcraftHandel(e){
+  parent.textContent = ""
+  function renderwoodcraft() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'woodcraft'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderwoodcraft()
+  
+}
+
+let foodItem = document.getElementById('food')
+food.addEventListener('click',foodHandel)
+
+function foodHandel(e){
+  parent.textContent = ""
+  function renderfood() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'cooking'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderfood()
+  
+}
+
+let clothesItem = document.getElementById('clothes')
+clothes.addEventListener('click',clothesHandel)
+
+function clothesHandel(e){
+  parent.textContent = ""
+  function renderclothes() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'clothes'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderclothes()
+  
+}
