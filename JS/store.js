@@ -272,6 +272,3 @@ function potteryHandel(e){
   renderpottery()
   
 }
-
-// let cartNo = document.getElementById('cartNo')
-// cartNo.textContent = `${chosenToCart.length} item`
