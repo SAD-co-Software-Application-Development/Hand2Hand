@@ -132,3 +132,11 @@ header nav{
 .fa-shopping-bag, .fa-users, .fa-shopping-cart {
     padding-right: 10px;
 }
+#cartNo{
+    color: white;
+    border: 1px solid tomato;
+    padding: 3px 7px;
+    background-color: tomato;
+    border-radius: 50%;
+    
+}

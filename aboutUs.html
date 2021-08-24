@@ -56,7 +56,7 @@
 
 
                 <a href="cart.html" id="cartIcon"  class ="icons">
-                    <li><i class="fas fa-shopping-cart"></i>CART</li>
+                    <li><i class="fas fa-shopping-cart"></i>CART <span id="cartNo"></span></li>
                 </a>
 
             </ul>
@@ -187,13 +187,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 100;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>

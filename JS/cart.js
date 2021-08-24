@@ -9,6 +9,14 @@ function loadLocal() {
   let stringData = localStorage.getItem('products');
   let loadedData = JSON.parse(stringData);
   itemArray = loadedData;
+  if (itemArray) {
+
+    let cartNo = document.getElementById('cartNo')
+    cartNo.textContent = `${itemArray.length} `
+  }else{
+    let cartNo = document.getElementById('cartNo')
+    cartNo.textContent = `0`
+  }
 }
 loadLocal();
 
@@ -56,6 +64,7 @@ function loadDataToCart() {
           tdEl4.textContent = `${total} $`;
           totalOfTotals -= total / itemArray[i].ordered
           tdEl7.textContent = `${totalOfTotals} $`
+          
 
           saveToLocalStorage()
 
@@ -86,6 +95,7 @@ function loadDataToCart() {
         tdEl4.textContent = `${total} $`;
         totalOfTotals += total / itemArray[i].ordered
         tdEl7.textContent = `${totalOfTotals} $`
+        
 
         saveToLocalStorage()
 
@@ -175,9 +185,9 @@ function saveToLocalStorage() {
 
 
 let cancel = document.getElementById('cancel');
-cancel.addEventListener('click', buyAllItems);
+cancel.addEventListener('click', cancelAllItems);
 
-function buyAllItems(event) {
+function cancelAllItems(event) {
   let clearTable = document.getElementById('tableBody');
   clearTable.textContent = "";
   localStorage.clear()
@@ -201,7 +211,7 @@ let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
-  if (itemArray.length > 0) {
+  if (itemArray) {
     modal.style.display = "block";
     let maquininhaDiv = document.getElementById('maquininha')
     maquininhaDiv.textContent = ''
@@ -285,8 +295,29 @@ function showButtons() {
   btncomprar.addEventListener('click', riveal);
   function riveal() {
     let buttons = document.getElementById("BTND");
+    buttons.addEventListener('click', doneHandle)
     // Hide the buttons (with placeholder)
     buttons.style.visibility = "hidden";
     // Start the timer
     window.setTimeout(showButtons, 5200); // after 1 Min = 60.000 ms
+  }
+
+  function doneHandle(event) {
+    event.preventDefault()
+
+    modal.style.display = "none";
+
+    let clearTable = document.getElementById('tableBody');
+
+    clearTable.textContent = "";
+
+    localStorage.clear()
+
+    itemArray = [];
+
+    loadDataToCart();
+
+    window.location.href = "store.html";
+
+    
   }

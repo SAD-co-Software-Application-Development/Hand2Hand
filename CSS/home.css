@@ -183,6 +183,9 @@ main .aheader{
     margin: auto;
     font-size: 2rem;
   }
+  #cartNo{
+    font-size: 100%;
+  }
   
   
   .carousel__face:nth-child(1) {
