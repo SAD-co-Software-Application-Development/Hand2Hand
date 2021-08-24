@@ -1,7 +1,7 @@
 'use strict';
 /* eslint-disable */
 let productArr = [];
-let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg', 'blouse-white.clothes.jpeg', 'bloyse-mixed-color.clothes.jpeg', 'bracelet.accessories.jpg', 'chicken-burger.cooking.jpg', 'Earring.accessories.webp', 'Fashion-jewelry.knitting.jpg', 'Facemask.knitting.jpeg', 'Sophie.woodcraft.jpg', 'Wool-cap.woolcraft.jpg', 'Chocolate-Cake.cooking.jpg']
+let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg', 'blouse-white.clothes.jpeg', 'blouse-mixed-color.clothes.jpeg', 'bracelet.accessories.jpg', 'chicken-burger.cooking.jpg', 'Earring.accessories.webp', 'Fashion-jewelry.knitting.jpg', 'Facemask.knitting.jpeg', 'Sophie.woodcraft.jpg', 'Wool-cap.woolcraft.jpg', 'Chocolate-Cake.cooking.jpg']
 let parent = document.getElementById('product')
 let chosenToCart = [];
 
@@ -12,6 +12,11 @@ function loadLocal() {
     let loadedData = JSON.parse(stringData);
 
     chosenToCart = loadedData;
+    let cartNo = document.getElementById('cartNo')
+    cartNo.textContent = `${chosenToCart.length} `
+  }else{
+    let cartNo = document.getElementById('cartNo')
+    cartNo.textContent = `0`
   }
 }
 loadLocal();
@@ -104,6 +109,7 @@ function handleCart(e) {
   let chosenProduct = e.target.id;
   chosenProduct = chosenProduct.split('t')[1]
   if (chosenToCart.length > 0) {
+    
     // console.log(11111)
 
     for (let i = 0; i < chosenToCart.length; i++) {
@@ -119,6 +125,8 @@ function handleCart(e) {
         
         chosenToCart.push(productArr[chosenProduct - 1])
         saveToLocalStorage()
+        let cartNo = document.getElementById('cartNo')
+cartNo.textContent = `${chosenToCart.length}`
       }
       // console.log(66666)
 
@@ -128,6 +136,8 @@ function handleCart(e) {
     // console.log(5555, chosenToCart.indexOf(productArr[chosenProduct - 1]))
     chosenToCart.push(productArr[chosenProduct - 1])
     saveToLocalStorage()
+    let cartNo = document.getElementById('cartNo')
+cartNo.textContent = `${chosenToCart.length}`
   }
 }
 
@@ -141,3 +151,100 @@ window.addEventListener('scroll', function () {
   let windowPosition = window.scrollY > 100;
   header.classList.toggle('scrolling-active', windowPosition);
 });
+
+let allItems = document.getElementById('allItems')
+allItems.addEventListener('click',allItemsHandel)
+
+function allItemsHandel(e){
+  parent.textContent = ""
+  renderImages()
+}
+
+let knittingItem = document.getElementById('knitting')
+knitting.addEventListener('click',knittingHandel)
+
+function knittingHandel(e){
+  parent.textContent = ""
+  function renderKnitting() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'knitting'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderKnitting()
+  
+}
+
+let woodcraftItem = document.getElementById('woodcraft')
+woodcraft.addEventListener('click',woodcraftHandel)
+
+function woodcraftHandel(e){
+  parent.textContent = ""
+  function renderwoodcraft() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'woodcraft'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderwoodcraft()
+  
+}
+
+let foodItem = document.getElementById('food')
+food.addEventListener('click',foodHandel)
+
+function foodHandel(e){
+  parent.textContent = ""
+  function renderfood() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'cooking'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderfood()
+  
+}
+
+let clothesItem = document.getElementById('clothes')
+clothes.addEventListener('click',clothesHandel)
+
+function clothesHandel(e){
+  parent.textContent = ""
+  function renderclothes() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'clothes'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderclothes()
+  
+}
+
+
+
+// let cartNo = document.getElementById('cartNo')
+// cartNo.textContent = `${chosenToCart.length} item`

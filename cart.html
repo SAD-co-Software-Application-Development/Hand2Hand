@@ -43,23 +43,23 @@
             </div>
             <ul id="navList">
 
-                <a href="index.html">
-                    <li>HOME</li>
+                <a href="index.html" class ="icons">
+                    <li><i class="fas fa-home"></i> HOME</li>
                 </a>
 
 
                 <a href="store.html">
-                    <li>STORE</li>
+                    <li><i class="fas fa-shopping-bag"></i>STORE</li>
                 </a>
 
 
                 <a href="aboutUs.html">
-                    <li>ABOUT US</li>
+                    <li><i class="fas fa-users"></i>ABOUT US</li>
                 </a>
 
 
                 <a href="cart.html" id="cartIcon">
-                    <li>CART</li>
+                    <li id="cart-color"><i class="fas fa-shopping-cart"></i>CART <span id="cartNo"></span></li>
                 </a>
 
             </ul>
@@ -104,6 +104,8 @@
                                     <h2>Order Summary:</h2>
                                 </div>
                                 <div id="maquininha" class="cartao maquininha">
+
+                                    
                                     <!-- <div class="flex-area j-space-between vai-sumir">
                                         <p>1 Carrinho HotWheels</p>
                                         <p>R$ 230,00</p>
@@ -139,7 +141,9 @@
 
                                 <form novalidate>
                                     <div class="flip-container">
+                                        <button id="BTND">Done</button>
                                         <div id="flipper" class="flipper">
+                                            
                                             <div class="cartao cartao-front">
                                                 <div
                                                     class="flex-area j-space-between a-items-center header-cartao a-items-start">
@@ -212,7 +216,7 @@
 
                                     <div id="button-area" class="flex-area j-center button-area">
                                         <button type="button" id="btn-comprar" class="btn-comprar">
-                                            <span>Confirmar Pagamento</span>
+                                            <span>Confirm Payment</span>
                                         </button>
                                     </div>
                                 </form>
@@ -223,7 +227,7 @@
                         <script>
                             const buyButton = document.getElementById('btn-comprar');
                             buyButton.addEventListener('click', function () {
-                                buyButton.innerHTML = 'Processando...';
+                                buyButton.innerHTML = 'Process...';
 
                                 // fake api request
                                 window.setTimeout(function () {

@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/aboutUs.css">
     <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/aboutUs.css">
     <link rel="stylesheet" href="CSS/footer.css">
-
+    <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -40,23 +40,23 @@
             </div>
             <ul id="navList">
 
-                <a href="index.html">
-                    <li>HOME</li>
+                <a href="index.html" class ="icons">
+                    <li><i class="fas fa-home"></i> HOME</li>
                 </a>
 
 
-                <a href="store.html">
-                    <li>STORE</li>
+                <a href="store.html" class ="icons">
+                    <li><i class="fas fa-shopping-bag"></i>STORE</li>
                 </a>
 
 
-                <a href="aboutUs.html">
-                    <li>ABOUT US</li>
+                <a href="aboutUs.html" class ="icons">
+                    <li id="about-color"><i class="fas fa-users"></i>ABOUT US</li>
                 </a>
 
 
-                <a href="cart.html" id="cartIcon">
-                    <li>CART</li>
+                <a href="cart.html" id="cartIcon"  class ="icons">
+                    <li><i class="fas fa-shopping-cart"></i>CART <span id="cartNo"></span></li>
                 </a>
 
             </ul>
@@ -187,13 +187,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 100;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>

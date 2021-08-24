@@ -5,6 +5,39 @@
    font-family: 'Lobster', cursive;
 }
 
+header{
+  background-color: #A7C4BC;
+  
+}
+
+#home-color {
+  background-color: #3a656b;
+}
+#home-color {
+  color: white;
+}
+
+/* #boxheader{
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  height: 90px;
+  width: 100%;
+  opacity: 0.3;
+} */
+
+#logoH1Titel{
+color: #254245; 
+}
+#logoH3Titel{
+  color:#3b6b5e;
+}
+#navList a{
+  color: #254245;
+  font-weight: 600;
+}
+
+
 
 main{
     padding-top: 5vw;
@@ -62,6 +95,7 @@ main{
 
 .col-2 p{
   line-height: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btn{
@@ -111,6 +145,7 @@ main .aheader{
       padding-left: 30px;
       padding-top: 30px;
       font-size: 40px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .container {
@@ -147,6 +182,9 @@ main .aheader{
   span {
     margin: auto;
     font-size: 2rem;
+  }
+  #cartNo{
+    font-size: 100%;
   }
   
   
@@ -211,11 +249,14 @@ main .aheader{
     font-size: 40px;
     padding-left: 30px;
     padding-top: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #secondP{
     padding: 25px;
     font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 
@@ -245,10 +286,7 @@ main .aheader{
 
   .col-3 img:hover{
     /* animation: shake 0.5s; */
-  animation-iteration-count: infinite;
-      width: 100%;
-      
-      
+    animation-iteration-count: infinite;      
   }
 
   .col-3 img{
@@ -281,8 +319,7 @@ main .aheader{
   }
 
   .categories .row{
-    
-  grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
   }
 
   figcaption { 
@@ -300,7 +337,7 @@ main .aheader{
       margin: auto;
       padding-left: 25px;
       padding-right: 25px;
-      
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
 
