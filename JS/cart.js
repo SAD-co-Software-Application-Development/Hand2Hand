@@ -45,7 +45,6 @@ function loadDataToCart() {
 
       let removeBtnEl = document.createElement('button');
       tdEl3.appendChild(removeBtnEl);
-      // removeBtnEl.textContent = '-'
 
       let minusIcon = document.createElement('i');
       minusIcon.className = "fas fa-minus-circle fa-2x"
@@ -54,7 +53,6 @@ function loadDataToCart() {
       removeBtnEl.addEventListener('click', removeQuantity)
       function removeQuantity(e) {
         if (pEl.textContent === '1') {
-          console.log(itemArray[i].ordered, pEl.textContent)
           pEl.textContent = itemArray[i].ordered
           removeBtnEl.removeEventListener('click', removeQuantity)
         } else {
@@ -65,11 +63,7 @@ function loadDataToCart() {
           totalOfTotals -= total / itemArray[i].ordered
           tdEl7.textContent = `${totalOfTotals} $`
           
-
           saveToLocalStorage()
-
-
-          console.log(itemArray[i].ordered, pEl.textContent)
         }
       }
 
@@ -80,7 +74,6 @@ function loadDataToCart() {
 
       let addBtnEl = document.createElement('button');
       tdEl3.appendChild(addBtnEl);
-      // addBtnEl.textContent = '+' 
 
       let plusIcon = document.createElement('i');
       plusIcon.className = "fas fa-plus-circle fa-2x"
@@ -95,12 +88,7 @@ function loadDataToCart() {
         tdEl4.textContent = `${total} $`;
         totalOfTotals += total / itemArray[i].ordered
         tdEl7.textContent = `${totalOfTotals} $`
-        
-
         saveToLocalStorage()
-
-        console.log(itemArray[i].ordered, pEl.textContent, total)
-
       }
 
 
@@ -114,19 +102,13 @@ function loadDataToCart() {
       let tdEl5 = document.createElement('td');
       trEl.appendChild(tdEl5);
       let removeBtnEl1 = document.createElement('button');
-      // removeBtnEl1.textContent = 'asda';
       let removeIcone = document.createElement('i')
       removeIcone.className = 'fas fa-trash-alt fa-2x'
       removeBtnEl1.appendChild(removeIcone)
       removeIcone.id = `rem${i}`
       removeBtnEl1.id = `del${i}`;
-      // removeBtnEl1.className = ''
       removeBtnEl1.addEventListener('click', handleRemove)
       tdEl5.appendChild(removeBtnEl1);
-      console.log(itemArray[i].price.split(' ')[0]);
-
-
-
 
     }
   }
@@ -158,18 +140,12 @@ loadDataToCart();
 
 
 function handleRemove(e) {
-  console.log(33333333333333, e.target.id)
   let deleteId = e.target.id;
   deleteId = deleteId.split('')[3];
-  console.log(itemArray[deleteId])
   itemArray.splice(deleteId, 1)
-  console.log(4444444444444, itemArray)
   localStorage.setItem('products', JSON.stringify(itemArray))
   loadLocal();
   loadDataToCart();
-  // totalOfTotals = total
-  console.log(totalOfTotals, total)
-  // window.location.reload();
 }
 
 window.addEventListener('scroll', function () {
@@ -268,9 +244,6 @@ let FancyCheckout = function (n) {
 value: function () {
    let e = this;
     this.littleMachine.addEventListener("transitionend", function () { e.littleMachine.style.cssText = "\n        height:auto;\n        z-index: 999;\n        padding: 50px 35px 90px 35px;\n        width: 80%;\n        margin:0px auto;\n        background: #5E8B7E;\n        background: -moz-linear-gradient(360deg, #5E8B7E 0%, #2F5D62 100%);\n        background: -webkit-linear-gradient(360deg, #5E8B7E 0%,#2F5D62 100%);\n        background: linear-gradient(360deg, #5E8B7E 0%,#2F5D62 100%);\n        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5E8B7E', endColorstr='#2F5D62',GradientType=1 );\n        border-bottom: 6px solid #20163d;\n        box-shadow: 0px 4px 8px #2F5D62;\n      ", e.niceEdge.style.opacity = "1" })
-//     , 
-// this.flipper.addEventListener("animationend", function () {
-//    e.successFeedback.style.cssText = "opacity:1; transform: translate(-50%, -100%);" })
    } }, 
    { key: "submit", value: function () { let e = this; this.littleMachine.style.height = "".concat(this.littleMachine.offsetHeight, "px"), this.scrolTop(), this.cardNumberBack.insertAdjacentHTML("afterbegin", this.cardNumber.value), this.cardNameBack.insertAdjacentHTML("afterbegin", this.cardName.value.toUpperCase()), this.cardDateBack.insertAdjacentHTML("afterbegin", this.cardDate.value), this.cardAreaTitle.classList.add("fadeOut"), this.areaTitle.classList.add("fadeOut"), this.areaButton.classList.add("fadeOut"), this.flipper.classList.add("anima-flipper"), this.cardBack.classList.add("anima-cartao-back"), this.littleMachine.classList.add("animacao-maquininha"), this.cardBack.addEventListener("animationend", function () { e.willDisappearAll.forEach(function (e) { e.style.animation = "vaiSumir 300ms both" }), e.willDisappear.addEventListener("animationend", function () { e.willDisappearAll.forEach(function (e) { return e.remove() }), e.total.style.cssText = "padding:15px; border:2px solid rgba(255,255,255,0.7); border-radius:4px;", e.littleMachine.style.height = "100px", e.secondStep() }, !1) }, !1) } }]) && a(e.prototype, n), r && a(e, r), t }(), i = { init: function (e, t) { let n = e, r = t; window.setTimeout(function () { n.value = r(n.value) }, 1) }, creditCardPattern: function (e) { let t = e; return t = (t = (t = (t = t.replace(/\D/g, "")).replace(/^(\d{4})(\d)/g, "$1 $2")).replace(/^(\d{4})\s(\d{4})(\d)/g, "$1 $2 $3")).replace(/^(\d{4})\s(\d{4})\s(\d{4})(\d)/g, "$1 $2 $3 $4") }, datePattern: function (e) { let t = e; return t = t.replace(/^(\d{2})(\d{4})/g, "$1/$2") } }, o = function () { let e = document.getElementById("numero-do-cartao-front"), t = document.getElementById("data-front"); e.addEventListener("keypress", function (e) { i.init(this, i.creditCardPattern) }), t.addEventListener("keypress", function (e) { i.init(this, i.datePattern) }) }, s = { onlyRegex: function (e, t) { let n = e.keyCode || e.which; n = String.fromCharCode(n), t.test(n) || (e.returnValue = !1, e.preventDefault && e.preventDefault()) } }, c = function () { let e = document.getElementById("numero-do-cartao-front"), t = document.getElementById("nome-front"), n = document.getElementById("data-front"), r = document.getElementById("cvv-front"); e.addEventListener("paste", function (e) { return e.preventDefault() }), e.addEventListener("copy", function (e) { return e.preventDefault() }), e.addEventListener("cut", function (e) { return e.preventDefault() }), e.addEventListener("keypress", function (e) { return s.onlyRegex(e, /\d/) }), t.addEventListener("keypress", function (e) { return s.onlyRegex(e, /[A-z\s]/) }), n.addEventListener("keypress", function (e) { return s.onlyRegex(e, /[\d]/) }), n.addEventListener("keypress", function (e) { return s.onlyRegex(e, /[\d]/) }), r.addEventListener("keypress", function (e) { return s.onlyRegex(e, /[\d]/) }) }, d = n(0); function u(e, t) { for (let n = 0; n < t.length; n++) { let r = t[n]; r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r) } } let l = function () { function t() { !function (e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") }(this, t); let e = document.querySelector.bind(document); this.cardFlag = e("#marca-cartao"), this.cardNumber = e("#numero-do-cartao-front"), this.init = this.init.bind(this), this.add = this.add.bind(this), this.remove = this.remove.bind(this), this.countChars = this.countChars.bind(this) } let e, n, r; return e = t, (n = [{ key: "init", value: function (e) { let t = e.target.value; t.length <= 3 ? this.remove() : Object(d.cardType)(t) && this.add(t) } }, { key: "add", value: function (e) { let t = this, n = Object(d.cardType)(e), r = this.countChars(n); this.cardFlag.setAttribute("alt", "Visa " + n), this.cardFlag.setAttribute("src", "Images/VisaCard/" + n + ".png"), this.cardNumber.setAttribute("minlength", r.minlength + 3), this.cardNumber.setAttribute("maxlength", r.maxlength + 3), window.setTimeout(function () { t.cardFlag.classList.add("marca-cartao-entra") }, 100) } }, { key: "remove", value: function () { let e = this; this.cardFlag.classList.remove("marca-cartao-entra"), window.setTimeout(function () { e.cardFlag.setAttribute("src", "Images/VisaCard/visa.png"), e.cardFlag.setAttribute("alt", ""), e.cardNumber.removeAttribute("minlength"), e.cardNumber.setAttribute("maxlength", 22) }, 100) } }, { key: "countChars", value: function (e) { let t, n; switch (e) { case "amex": n = t = 15; break; case "diners": t = 14, n = 16; break; case "discover": case "elo": n = t = 16; break; case "hipercard": t = 13, n = 19; break; case "jcb": case "mastercard": n = t = 16; break; case "visa": t = 13, n = 16 }return { minlength: t, maxlength: n } } }]) && u(e.prototype, n), r && u(e, r), t }(), f = function () { let e = new l; document.getElementById("numero-do-cartao-front").addEventListener("keyup", e.init) }; o(), c(), f(); n(1); function h() { (new r).submit() } n.d(t, "init", function () { return h }) }]);
 
@@ -288,9 +261,6 @@ function showButtons() {
   buttons.style.visibility = "visible";
 }
  
-// Start the script after the page is loaded
-// SoSciTools.attachEvent(window, "load",
-//   function() {
   let btncomprar = document.getElementById('btn-comprar')
   btncomprar.addEventListener('click', riveal);
   function riveal() {
