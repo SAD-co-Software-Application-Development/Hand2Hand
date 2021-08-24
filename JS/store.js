@@ -23,7 +23,6 @@ function loadLocal() {
   }
 }
 loadLocal();
-console.log(chosenToCart)
 function Product(path, price, category = null, id) {
   this.name = path.split('.')[0];
   this.path = './Images/Products/' + path;
@@ -113,22 +112,17 @@ function handleCart(e) {
   chosenProduct = chosenProduct.split('t')[1]
   if (chosenToCart.length > 0) {
     
-    // console.log(11111)
 
     for (let i = 0; i < chosenToCart.length; i++) {
-    // console.log(2222)
 
       if (chosenToCart[i].name == productArr[chosenProduct - 1].name) {
-    // console.log(33333)
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
       text: "It's already in the cart!",
     })
-        //do nothing
         break
       }else if(i == chosenToCart.length - 1){
-    // console.log(44444)
         
         chosenToCart.push(productArr[chosenProduct - 1])
         saveToLocalStorage()
@@ -136,12 +130,10 @@ function handleCart(e) {
 cartNo.textContent = `${chosenToCart.length}`
 break
       }
-      // console.log(66666)
 
     }
 
   } else {
-    // console.log(5555, chosenToCart.indexOf(productArr[chosenProduct - 1]))
     chosenToCart.push(productArr[chosenProduct - 1])
     saveToLocalStorage()
     let cartNo = document.getElementById('cartNo')
@@ -178,7 +170,6 @@ function knittingHandel(e){
       
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
-      console.log(current)
       if(current.category == 'knitting'){
 
         current.render(index)
@@ -199,7 +190,6 @@ function woodcraftHandel(e){
       
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
-      console.log(current)
       if(current.category == 'woodcraft'){
 
         current.render(index)
@@ -220,7 +210,6 @@ function foodHandel(e){
       
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
-      console.log(current)
       if(current.category == 'food'){
 
         current.render(index)
@@ -241,7 +230,6 @@ function accessoriesHandel(e){
       
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
-      console.log(current)
       if(current.category == 'accessories'){
 
         current.render(index)
@@ -262,7 +250,6 @@ function potteryHandel(e){
       
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
-      console.log(current)
       if(current.category == 'pottery'){
 
         current.render(index)
@@ -272,6 +259,3 @@ function potteryHandel(e){
   renderpottery()
   
 }
-
-// let cartNo = document.getElementById('cartNo')
-// cartNo.textContent = `${chosenToCart.length} item`
