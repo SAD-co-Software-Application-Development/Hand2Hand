@@ -245,10 +245,7 @@ main .aheader{
 
   .col-3 img:hover{
     /* animation: shake 0.5s; */
-  animation-iteration-count: infinite;
-      width: 100%;
-      
-      
+    animation-iteration-count: infinite;      
   }
 
   .col-3 img{
