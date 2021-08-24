@@ -12,6 +12,11 @@ function loadLocal() {
     let loadedData = JSON.parse(stringData);
 
     chosenToCart = loadedData;
+    let cartNo = document.getElementById('cartNo')
+    cartNo.textContent = `${chosenToCart.length} `
+  }else{
+    let cartNo = document.getElementById('cartNo')
+    cartNo.textContent = `0`
   }
 }
 loadLocal();
@@ -104,6 +109,7 @@ function handleCart(e) {
   let chosenProduct = e.target.id;
   chosenProduct = chosenProduct.split('t')[1]
   if (chosenToCart.length > 0) {
+    
     // console.log(11111)
 
     for (let i = 0; i < chosenToCart.length; i++) {
@@ -119,6 +125,8 @@ function handleCart(e) {
         
         chosenToCart.push(productArr[chosenProduct - 1])
         saveToLocalStorage()
+        let cartNo = document.getElementById('cartNo')
+cartNo.textContent = `${chosenToCart.length}`
       }
       // console.log(66666)
 
@@ -128,6 +136,8 @@ function handleCart(e) {
     // console.log(5555, chosenToCart.indexOf(productArr[chosenProduct - 1]))
     chosenToCart.push(productArr[chosenProduct - 1])
     saveToLocalStorage()
+    let cartNo = document.getElementById('cartNo')
+cartNo.textContent = `${chosenToCart.length}`
   }
 }
 
@@ -233,3 +243,8 @@ function clothesHandel(e){
   renderclothes()
   
 }
+
+
+
+// let cartNo = document.getElementById('cartNo')
+// cartNo.textContent = `${chosenToCart.length} item`
