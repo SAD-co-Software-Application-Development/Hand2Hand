@@ -4,8 +4,9 @@
 nav a{
     text-decoration: none;
     color: white  ;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 1vw;
+    font-weight: 600;
 }
 #navList a li{
     width: 160%;
@@ -102,7 +103,7 @@ header nav{
     /* justify-content: space-between; */
     width: 40%;
     line-height: 4.5vw;
-    padding: 0 1vw;
+    /* padding: 0 0.3vw; */
     font-size: 120%;
     text-align: center;
 }

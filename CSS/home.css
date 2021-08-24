@@ -5,6 +5,31 @@
    font-family: 'Lobster', cursive;
 }
 
+header{
+  background-color: #A7C4BC;
+  
+}
+/* #boxheader{
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  height: 90px;
+  width: 100%;
+  opacity: 0.3;
+} */
+
+#logoH1Titel{
+color: #254245; 
+}
+#logoH3Titel{
+  color:#3b6b5e;
+}
+#navList a{
+  color: #254245;
+  font-weight: 600;
+}
+
+
 
 main{
     padding-top: 5vw;
