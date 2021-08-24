@@ -1,7 +1,10 @@
 'use strict';
 /* eslint-disable */
 let productArr = [];
-let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg', 'blouse-white.clothes.jpeg', 'blouse-mixed-color.clothes.jpeg', 'bracelet.accessories.jpg', 'chicken-burger.cooking.jpg', 'Earring.accessories.webp', 'Fashion-jewelry.knitting.jpg', 'Facemask.knitting.jpeg', 'Sophie.woodcraft.jpg', 'Wool-cap.woolcraft.jpg', 'Chocolate-Cake.cooking.jpg']
+let productsImages = ['wooden-shelf.woodcraft.jpg','women-purse.accessories.jfif','Hair-Jewelry.accessories.jpg','wallet.accessories.jpg','vase.pottery.jpg','tray.woodcraft.png','teapot.pottery.jfif','table.woodcraft.jpg','sweet.food.jpg','sweater.knitting.jfif','square-plates.woodcraft.jfif','snowman.woodcraft.jpg','scarf.knitting.jfif','ring.accessories.jfif','pickle.food.jpg',
+'photo-frame.woodcraft.jfif','mag.pottery.jfif','jam.food.jfif','headband-flower.accessories.jpg','hair-pin.accessories.jpg','grape-leaves.food.jpg','gloves.knitting.jpg','glass.pottery.jfif',
+  'flower-vasa.pottery.jpg','face-mask.knitting.jfif','earrings.accessories.jpg','clock.woodcraft.jpg','cape.knitting.jpg','cabbage.food.png','bracelet.accessories.jpg','bag.accessories.jpg',
+  'baby.knitting.jfif','anklet.accessories.jpg']
 let parent = document.getElementById('product')
 let chosenToCart = [];
 
@@ -117,7 +120,11 @@ function handleCart(e) {
 
       if (chosenToCart[i].name == productArr[chosenProduct - 1].name) {
     // console.log(33333)
-
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: "It's already in the cart!",
+    })
         //do nothing
         break
       }else if(i == chosenToCart.length - 1){
@@ -127,6 +134,7 @@ function handleCart(e) {
         saveToLocalStorage()
         let cartNo = document.getElementById('cartNo')
 cartNo.textContent = `${chosenToCart.length}`
+break
       }
       // console.log(66666)
 
@@ -213,7 +221,7 @@ function foodHandel(e){
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
       console.log(current)
-      if(current.category == 'cooking'){
+      if(current.category == 'food'){
 
         current.render(index)
       }
@@ -223,28 +231,47 @@ function foodHandel(e){
   
 }
 
-let clothesItem = document.getElementById('clothes')
-clothes.addEventListener('click',clothesHandel)
+let accessoriesItem = document.getElementById('accessories')
+accessories.addEventListener('click',accessoriesHandel)
 
-function clothesHandel(e){
+function accessoriesHandel(e){
   parent.textContent = ""
-  function renderclothes() {
+  function renderaccessories() {
     for (let index = 0; index < productsImages.length; index++) {
       
       let random = getRandomIntInclusive(5, 50)
       let current = new Product(productsImages[index], random, index)
       console.log(current)
-      if(current.category == 'clothes'){
+      if(current.category == 'accessories'){
 
         current.render(index)
       }
     }
   }
-  renderclothes()
+  renderaccessories()
   
 }
 
+let potteryItem = document.getElementById('pottery')
+pottery.addEventListener('click',potteryHandel)
 
+function potteryHandel(e){
+  parent.textContent = ""
+  function renderpottery() {
+    for (let index = 0; index < productsImages.length; index++) {
+      
+      let random = getRandomIntInclusive(5, 50)
+      let current = new Product(productsImages[index], random, index)
+      console.log(current)
+      if(current.category == 'pottery'){
+
+        current.render(index)
+      }
+    }
+  }
+  renderpottery()
+  
+}
 
 // let cartNo = document.getElementById('cartNo')
 // cartNo.textContent = `${chosenToCart.length} item`
