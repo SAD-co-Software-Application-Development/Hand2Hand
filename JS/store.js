@@ -1,7 +1,7 @@
 'use strict';
 /* eslint-disable */
 let productArr = [];
-let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg', 'blouse-white.clothes.jpeg', 'bloyse-mixed-color.clothes.jpeg', 'bracelet.accessories.jpg', 'chicken-burger.cooking.jpg', 'Earring.accessories.webp', 'Fashion-jewelry.knitting.jpg', 'Facemask.knitting.jpeg', 'Sophie.woodcraft.jpg', 'Wool-cap.woolcraft.jpg', 'Chocolate-Cake.cooking.jpg']
+let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg', 'blouse-white.clothes.jpeg', 'blouse-mixed-color.clothes.jpeg', 'bracelet.accessories.jpg', 'chicken-burger.cooking.jpg', 'Earring.accessories.webp', 'Fashion-jewelry.knitting.jpg', 'Facemask.knitting.jpeg', 'Sophie.woodcraft.jpg', 'Wool-cap.woolcraft.jpg', 'Chocolate-Cake.cooking.jpg']
 let parent = document.getElementById('product')
 let chosenToCart = [];
 

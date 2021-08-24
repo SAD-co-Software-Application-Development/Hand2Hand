@@ -11,6 +11,14 @@ header{
     background-color: #DFEEEA;
 }
 
+#store-color {
+    background-color: #3a656b;
+}
+
+#store-color {
+    color: white;
+}
+
 #logoH1Titel{
  color: #254245; 
 }
@@ -117,17 +125,15 @@ height: 300px;
 }
 .nameParagraph{
     margin-left: 100px;
-   font-family: 'Lobster', cursive;
-   font-size: 20px;
-   margin-top: -100px;
-
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    margin-top: -100px;
 }
 .priceParagraph{
     margin-left: 100px;
-   font-family: 'Lobster', cursive;
-   font-size: 20px;
-   margin-bottom: 20px;
-
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 .ratingDiv{
     margin-left: 100px;

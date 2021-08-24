@@ -9,6 +9,14 @@ header{
   background-color: #A7C4BC;
   
 }
+
+#home-color {
+  background-color: #3a656b;
+}
+#home-color {
+  color: white;
+}
+
 /* #boxheader{
   position: fixed;
   z-index: 2;
@@ -87,6 +95,7 @@ main{
 
 .col-2 p{
   line-height: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btn{
@@ -136,6 +145,7 @@ main .aheader{
       padding-left: 30px;
       padding-top: 30px;
       font-size: 40px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .container {
@@ -236,11 +246,14 @@ main .aheader{
     font-size: 40px;
     padding-left: 30px;
     padding-top: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #secondP{
     padding: 25px;
     font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 
@@ -303,8 +316,7 @@ main .aheader{
   }
 
   .categories .row{
-    
-  grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
   }
 
   figcaption { 
@@ -322,7 +334,7 @@ main .aheader{
       margin: auto;
       padding-left: 25px;
       padding-right: 25px;
-      
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
 

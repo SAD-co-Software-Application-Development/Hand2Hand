@@ -4,8 +4,16 @@
     width: 100%;
 background-repeat: no-repeat;
 background-size: cover;
-
 }
+
+#about-color {
+  background-color: #3a656b;
+}
+
+#about-color {
+  color: white;
+}
+
 #banner img{
     position: absolute;
     margin-top: -5rem;
