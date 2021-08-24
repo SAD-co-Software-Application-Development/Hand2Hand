@@ -1,43 +1,44 @@
 'use strict';
 /* eslint-disable */
-let productArr =[];
-let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg','blouse-white.clothes.jpeg','bloyse-mixed-color.clothes.jpeg','bracelet.accessories.jpg','chicken-burger.cooking.jpg','Earring.accessories.webp','Fashion-jewelry.knitting.jpg','Facemask.knitting.jpeg','Sophie.woodcraft.jpg','Wool-cap.woolcraft.jpg','Chocolate-Cake.cooking.jpg']
+let productArr = [];
+let productsImages = ['blouse-Navy-blue.clothes.webp', 'blouse-silver.clothes.jpg', 'blouse-white.clothes.jpeg', 'bloyse-mixed-color.clothes.jpeg', 'bracelet.accessories.jpg', 'chicken-burger.cooking.jpg', 'Earring.accessories.webp', 'Fashion-jewelry.knitting.jpg', 'Facemask.knitting.jpeg', 'Sophie.woodcraft.jpg', 'Wool-cap.woolcraft.jpg', 'Chocolate-Cake.cooking.jpg']
 let parent = document.getElementById('product')
 let chosenToCart = [];
 
 function loadLocal() {
   let stringData = localStorage.getItem('products');
-  if(stringData){
+  if (stringData) {
 
     let loadedData = JSON.parse(stringData);
+
     chosenToCart = loadedData;
   }
 }
 loadLocal();
-
-function Product(path, price, category= null, id){
-    this.name=path.split('.')[0];
-    this.path = './Images/Products/'+path;
-    this.price = `${price} $`;
-    this.category = path.split('.')[1];
-    this.ordered = 1;
-    this.id = id
-    productArr.push(this)
+console.log(chosenToCart)
+function Product(path, price, category = null, id) {
+  this.name = path.split('.')[0];
+  this.path = './Images/Products/' + path;
+  this.price = `${price} $`;
+  this.category = path.split('.')[1];
+  this.ordered = 1;
+  this.id = id
+  productArr.push(this)
 }
 
-Product.prototype.render = function (i){
-let img = document.createElement('img');
-parent.appendChild(img);
-img.setAttribute('width','250px')
-img.setAttribute('height','240px')
-img.src = this.path
-let btn = document.createElement('button');
-parent.appendChild(btn);
-btn.textContent ='add to cart';
-btn.id = `bt${i+1}`;
-btn.className = 'btnStyling'
-let btnAdd = document.getElementById(`bt${i+1}`)
-btnAdd.addEventListener('click', handleCart)
+Product.prototype.render = function (i) {
+  let img = document.createElement('img');
+  parent.appendChild(img);
+  img.setAttribute('width', '250px')
+  img.setAttribute('height', '240px')
+  img.src = this.path
+  let btn = document.createElement('button');
+  parent.appendChild(btn);
+  btn.textContent = 'add to cart';
+  btn.id = `bt${i + 1}`;
+  btn.className = 'btnStyling'
+  let btnAdd = document.getElementById(`bt${i + 1}`)
+  btnAdd.addEventListener('click', handleCart)
 }
 
 function getRandomIntInclusive(min, max) {
@@ -48,34 +49,49 @@ function getRandomIntInclusive(min, max) {
 
 
 function renderImages() {
-    for (let index = 0; index < productsImages.length; index++) {
-let random = getRandomIntInclusive(5,50)
-      let current =  new Product(productsImages[index],random, index)
-      current.render(index)
-
-        
-    }
+  for (let index = 0; index < productsImages.length; index++) {
+    let random = getRandomIntInclusive(5, 50)
+    let current = new Product(productsImages[index], random, index)
+    current.render(index)
+  }
 }
 renderImages()
-// let btnAdd = document.getElementsByClassName('btnStyling')
-// btnAdd.addEventListener('click', handleCart)
 
 
-function handleCart(e){
-    let chosenProduct = e.target.id;
-    console.log(1111111,chosenProduct)
-    chosenProduct = chosenProduct.split('t')[1]
-    console.log(productArr)
-    console.log(chosenProduct-1)
-    console.log(22222222, productArr[chosenProduct-1])
-console.log(chosenToCart)
-    chosenToCart.push(productArr[chosenProduct-1])
+function handleCart(e) {
+  let chosenProduct = e.target.id;
+  chosenProduct = chosenProduct.split('t')[1]
+  if (chosenToCart.length > 0) {
+    // console.log(11111)
+
+    for (let i = 0; i < chosenToCart.length; i++) {
+    // console.log(2222)
+
+      if (chosenToCart[i].name == productArr[chosenProduct - 1].name) {
+    // console.log(33333)
+
+        //do nothing
+        break
+      }else if(i == chosenToCart.length - 1){
+    // console.log(44444)
+        
+        chosenToCart.push(productArr[chosenProduct - 1])
+        saveToLocalStorage()
+      }
+      // console.log(66666)
+
+    }
+
+  } else {
+    // console.log(5555, chosenToCart.indexOf(productArr[chosenProduct - 1]))
+    chosenToCart.push(productArr[chosenProduct - 1])
     saveToLocalStorage()
+  }
 }
 
-function saveToLocalStorage(){
+function saveToLocalStorage() {
   let data = JSON.stringify(chosenToCart)
-  localStorage.setItem('products',data)
+  localStorage.setItem('products', data)
 }
 
 window.addEventListener('scroll', function () {
@@ -83,5 +99,3 @@ window.addEventListener('scroll', function () {
   let windowPosition = window.scrollY > 100;
   header.classList.toggle('scrolling-active', windowPosition);
 });
-
-
