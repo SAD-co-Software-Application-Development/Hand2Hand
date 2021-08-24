@@ -27,18 +27,60 @@ function Product(path, price, category = null, id) {
 }
 
 Product.prototype.render = function (i) {
+let divContianer = document.createElement('div')
+divContianer.className = "imageContainer"
+parent.appendChild(divContianer)
+divContianer.setAttribute('display','flex')
+
   let img = document.createElement('img');
-  parent.appendChild(img);
+  divContianer.appendChild(img);
   img.setAttribute('width', '250px')
   img.setAttribute('height', '240px')
   img.src = this.path
   let btn = document.createElement('button');
-  parent.appendChild(btn);
+  divContianer.appendChild(btn);
   btn.textContent = 'add to cart';
   btn.id = `bt${i + 1}`;
   btn.className = 'btnStyling'
   let btnAdd = document.getElementById(`bt${i + 1}`)
   btnAdd.addEventListener('click', handleCart)
+
+  let namePEl = document.createElement('p')
+  divContianer.appendChild(namePEl)
+  namePEl.textContent = `Product : ${this.name}`
+  namePEl.className = "nameParagraph"
+
+  let ratingDiv = document.createElement('div')
+  ratingDiv.className="ratingDiv"
+  divContianer.appendChild(ratingDiv)
+
+  let starEl = document.createElement('i')
+  starEl.className = "fa fa-star"
+  ratingDiv.appendChild(starEl)
+
+  let starEl1 = document.createElement('i')
+  starEl1.className = "fa fa-star"
+  ratingDiv.appendChild(starEl1)
+
+  let starEl2 = document.createElement('i')
+  starEl2.className = "fa fa-star"
+  ratingDiv.appendChild(starEl2)
+
+  let starEl3 = document.createElement('i')
+  starEl3.className = "fa fa-star"
+  ratingDiv.appendChild(starEl3)
+
+  let starEl4 = document.createElement('i')
+  starEl4.className = "fa fa-star-o"
+  ratingDiv.appendChild(starEl4)
+
+  let pricePEl = document.createElement('p')
+  divContianer.appendChild(pricePEl)
+  pricePEl.textContent = `Price : ${this.price}`
+  pricePEl.className = "priceParagraph"
+
+ 
+
 }
 
 function getRandomIntInclusive(min, max) {
