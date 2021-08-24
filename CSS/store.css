@@ -71,7 +71,7 @@ box-shadow: 20px 2px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.3);
     transform: translateX(30px);
   }
 
-#knitting,#woodcraft,#Paintings,#clothes {
+ #allItems,#knitting,#woodcraft,#food,#clothes {
     font-weight: 400;
     /* font-style:oblique ; */
     width: 150px;
