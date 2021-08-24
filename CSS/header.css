@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+nav a{
+    text-decoration: none;
+    color: white  ;
+    margin-left: 20px;
+    font-size: 1vw;
+}
+#navList a li{
+    width: 160%;
+    height: 100%;
+}
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+background-color: transparent;
+border-bottom: 1px solid #254245 ;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.3);
+transition: 0.75s ease;  
+
+}
+
+.scrolling-active{
+    background-color: #DFEEEA;
+transition: 0.75s ease;  
+box-shadow: 0 1px 2px 0 rgba(37, 66, 69, 0.2), 0 1px 15px 0 rgba(37, 66, 69, 0.3);
+border: none;
+
+}
+.scrolling-active #logoH1Titel{
+ color: #254245; 
+}
+.scrolling-active #logoH3Titel{
+    color:#62A894;
+}
+.scrolling-active a{
+    color: #254245;
+}
+#logo{
+    display: flex;
+    width: 20%;
+}
+#logoImg{
+    width: 5vw;
+}
+#logoTitel{
+    margin-top: 0.8vw;
+}
+#logoH1Titel{
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+#logoH3Titel{
+    font-family: 'Lobster', cursive;
+    font-style: italic;
+    opacity: 0.6;
+    font-size: 0.8vw;
+    color: white;
+    letter-spacing: 0.23vw;
+}
+header nav{
+    display: flex;
+    width: 80%;
+}
+#search{
+    width: 60%;
+}
+#searchBar{
+    width: 85%;
+    border-radius: 1vw 0 0 0;
+    border: 0.15vw solid #62A894;
+    margin-top: 1.3vw;
+    height: 2vw;
+}
+#searchBar:focus{
+    outline: none !important;
+}
+#searchBTN{
+    background-color: transparent;
+    border: none;
+    color: tomato;
+    width: 10%;
+    height: 2vw;
+    border: 0.15vw solid #62A894;
+    border-radius: 0 0 1vw 0;
+    border-left: none;
+}
+#searchBTN:hover{
+    background-color: tomato;
+    border: none;
+    color: white;
+    border-radius: 0.2vw;
+    border-radius: 0 0 1vw 0;
+}
+#navList{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 40%;
+    line-height: 4.5vw;
+    padding: 0 1vw;
+    font-size: 120%;
+    text-align: center;
+}
+#navList > * + *{
+    margin-left: 4vw;
+}
+#navList li{
+    width: 25%;
+}
+#navList li:hover{
+    background-color: #3a656b;
+}
+#navList a li:hover {
+    color: white;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="Images/3163.png" alt="" id="logoImg" />
+            </a>
+            <div id="logoTitel">
+                <h1 id="logoH1Titel">Hand 2 Hand</h1>
+                <h3 id="logoH3Titel">Original Hand Made</h3>
+            </div>
+        </div>
+        <nav>
+            <div id="search">
+                <form action="#">
+                    <input id="searchBar" type="text" placeholder=" Search " name="search"><button id="searchBTN">
+                        <i class="fa fa-search fa-lg" id="searchIcon">
+                        </i>
+                    </button>
+                </form>
+            </div>
+            <ul id="navList">
+
+                <a href="index.html">
+                    <li>HOME</li>
+                </a>
+
+
+                <a href="store.html">
+                    <li>STORE</li>
+                </a>
+
+
+                <a href="aboutUs.html">
+                    <li>ABOUT US</li>
+                </a>
+
+
+                <a href="cart.html" id="cartIcon">
+                    <li>CART</li>
+                </a>
+
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div">
+            </div>
+            <table id="cartTable">
+                <legend>CART</legend>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+                <tfoot id="tableFooter">
+
+                </tfoot>
+            </table>
+            <div id="tableButton">
+                <button id="cancel">Cancel</button>
+                <button id="buy">Buy</button>
+            </div>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Payment Information</p>
+                    <div>
+                        <div class="global">
+                            <div class="resumo-pedido-area">
+                                <div id="titulo-area" class="flex-area j-space-between titulo-area">
+                                    <h2>Order Summary:</h2>
+                                </div>
+                                <div id="maquininha" class="cartao maquininha">
+                                    <!-- <div class="flex-area j-space-between vai-sumir">
+                                        <p>1 Carrinho HotWheels</p>
+                                        <p>R$ 230,00</p>
+                                    </div>
+
+                                    <div class="flex-area j-space-between vai-sumir">
+                                        <p>2 Lego Play Party</p>
+                                        <p>R$ 73,80</p>
+                                    </div>
+
+                                    <div class="flex-area j-space-between vai-sumir">
+                                        <p>1 God Of War</p>
+                                        <p>R$ 159,90</p>
+                                    </div>
+
+                                    <div id="total" class="total flex-area j-space-between">
+                                        <p>Total</p>
+                                        <h4>R$ 463,70</h4>
+                                    </div> -->
+
+                                    <div class="loading-area">
+                                        <div id="feedback-sucesso" class="feedback-sucesso">
+                                            <h3 class="compra-sucesso">Compra efetuada com sucesso!</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="bordinha-nice" class="bordinha-nice"></div>
+                            </div>
+
+                            <div id="card-area" class="card-area">
+                                <h2 id="card-area-titulo">Finalize purchase:</h2>
+
+                                <form novalidate>
+                                    <div class="flip-container">
+                                        <div id="flipper" class="flipper">
+                                            <div class="cartao cartao-front">
+                                                <div
+                                                    class="flex-area j-space-between a-items-center header-cartao a-items-start">
+                                                    <h3 style="white-space: nowrap">Card Information</h3>
+                                                    <img src="Images/Visa/visa.png" id="marca-cartao"
+                                                        class="marca-cartao" alt="Logo do seu cartão de crédito"
+                                                        height="30px">
+                                                </div>
+
+                                                <label>
+                                                    <span>Card Number</span>
+                                                    <div class="input-area">
+                                                        <i class="material-icons">payment</i>
+                                                        <input type="text" id="numero-do-cartao-front"
+                                                            class="numero-do-cartao-front">
+                                                    </div>
+                                                </label>
+
+                                                <label>
+                                                    <span>Name</span>
+                                                    <div class="input-area">
+                                                        <input type="text" id="nome-front" class="nome-front"
+                                                            style="text-transform: uppercase" autocomplete="off">
+                                                    </div>
+                                                </label>
+
+                                                <div class="flex-area j-space-between">
+                                                    <label class="w-48">
+                                                        <span>Expiration (mm/yy)</span>
+                                                        <div class="input-area">
+                                                            <input type="text" id="data-front" class="data-front"
+                                                                maxlength="7">
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="w-48">
+                                                        <span>CVV</span>
+                                                        <div class="input-area">
+                                                            <input type="number" id="cvv-front" class="cvv-front"
+                                                                maxlength="4">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div id="cartao-back" class="cartao cartao-back">
+                                                <div class="flex-area j-space-between a-items-center header-cartao">
+                                                    <img src="Images/Visa/visa.png"
+                                                        alt="Logo do seu cartão de crédito" height='30px'>
+                                                </div>
+
+                                                <label>
+                                                    <h3 id="numero-do-cartao-back" class="numero-do-cartao-back"></h3>
+                                                </label>
+
+                                                <label>
+                                                    <h3 id="nome-back" class="nome-back"></h3>
+                                                </label>
+
+                                                <div class="flex-area j-space-between a-items-start">
+                                                    <label class="w-48">
+                                                        <h3 id="data-back" class="data-back"></h3>
+                                                    </label>
+
+                                                    <img class="chip" src="Images/Visa/chip.png" alt="chip cartão">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="button-area" class="flex-area j-center button-area">
+                                        <button type="button" id="btn-comprar" class="btn-comprar">
+                                            <span>Confirmar Pagamento</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <script src="JS/cart.js"></script>
+                        <script>
+                            const buyButton = document.getElementById('btn-comprar');
+                            buyButton.addEventListener('click', function () {
+                                buyButton.innerHTML = 'Processando...';
+
+                                // fake api request
+                                window.setTimeout(function () {
+                                    // success return
+                                    FancyCheckout.init();
+                                }, 2000);
+                            });
+                        </script>
+                    </div>
+
+                </div>
+
+            </div>
+    </main>
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="Images/3163.png" alt="" id="logoImg" />
+                    </a>
+                    <div id="logoTitel">
+                        <h1 id="logoH1Titel">Hand 2 Hand</h1>
+                        <h3 id="logoH3Titel">Original Hand Made</h3>
+                    </div>
+                </div>
+                <div class="media-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">Links</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Services</li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Marketing</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Other services</li>
+                    <li><a href="#">Shope Management</a></li>
+                    <li><a href="#">Affiliate Marketing</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Contact</li>
+                    <li><a href="#">+962 7990894852</a></li>
+                    <li><a href="#">+962 7854599224</a></li>
+                    <li><a href="#">contact@SAD.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2021 <a href="#">SAD.co</a></span>
+                <span class="policy_terms">
+                    <a href="#">Privacy policy</a>
+
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="JS/cart.js"></script> -->
+</body>
+
+</html>
