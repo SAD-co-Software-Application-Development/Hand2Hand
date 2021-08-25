@@ -40,7 +40,7 @@ main{
     height: 500px;
     width: 80%;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.7;
     position: relative;
     z-index: 1;
     border-radius:30px;
@@ -85,7 +85,8 @@ main{
 
 .col-2 p{
   line-height: 25px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .btn{
@@ -134,8 +135,11 @@ main .aheader{
   .all h1{
       padding-left: 30px;
       padding-top: 30px;
+      margin-left: 50px;
       font-size: 40px;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-style: italic;
   }
 
   .container {
@@ -220,8 +224,7 @@ main .aheader{
 /* ----------- for paragraph2 ---------- */
 
 .paragraph2 {
-
-    padding: 80px;
+    /* padding: 80px; */
     display: flex;
 
 }
@@ -236,20 +239,29 @@ main .aheader{
 }
 
 .FinalP h1{
-    font-size: 40px;
+    font-size: 45px;
     padding-left: 30px;
-    padding-top: 30px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    padding-top: 40px;
+font-family: Arial, Helvetica, sans-serif;   
+font-weight: 600;
+font-style: italic;
+  }
 
 #secondP{
     padding: 25px;
+    padding-top: 50px;
     font-size: 30px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+font-family: Arial, Helvetica, sans-serif;
+text-align: justify;
 }
 
-
+.FinalP {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 
   
@@ -336,6 +348,10 @@ main .aheader{
 .small-container h1{
 padding-top: 35px;
     font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 50px;
 }
 
 .col-4 h4{
