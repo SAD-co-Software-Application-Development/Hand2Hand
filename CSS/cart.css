@@ -1,5 +1,6 @@
 main{
-    padding-top: 15vw;
+    padding-top: 9vw;
+    padding-bottom: 2vw;
 }
 
 header{
@@ -28,8 +29,9 @@ header{
     overflow: hidden;
     border-radius: 1vw;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: 100px;
 }
 
 #cartTable tr th {
@@ -81,7 +83,7 @@ header{
 #tableFooter td {
     padding-top: 100px;
     padding-bottom: 20px;
-    font-size: large;
+    font-size: 20px;
     font-weight: 600;
 
 }
@@ -97,10 +99,11 @@ header{
 }
 
 legend {
-    text-align: center;
+    /* text-align: left; */
     padding-bottom: 50px;
-    font-weight: 800;
-    font-size: xx-large;
+    font-weight: 600;
+    font-size: 35px;
+    margin-left: 150px;
 }
 
 

@@ -137,3 +137,6 @@ height: 300px;
     margin-bottom: 5px;
 }
 
+#product img{
+    border-radius: 20px 0;
+}
