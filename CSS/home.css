@@ -201,7 +201,7 @@ main .aheader{
     background-image: url("../Images/Products/women-purse.accessories.jfif");
    transform: rotateY(200deg) translateZ(430px); }
   .carousel__face:nth-child(7) { 
-    background-image: url("../Images/Products/baby.knitting.jfif");
+    background-image: url("../Images/Products/scarf.knitting.jfif");
    transform: rotateY(240deg) translateZ(430px); }
   .carousel__face:nth-child(8) {
     background-image: url("https://cdn.shoplo.com/83403187/products/th640/aaa5/326-liberty-print-tana-lawn-and-silk-masks-2-1.jpeg");
