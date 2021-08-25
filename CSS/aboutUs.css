@@ -165,6 +165,9 @@ background-size: cover;
   justify-content: flex-start;
   align-items:center;
   background:linear-gradient(45deg,#254245,#62A894) ;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 3px 5px 8px 0px rgba(0, 0, 0, 0.3);
+border-radius: 8px;
+
   transition: 0.5s;
 }
 .cards:hover{
@@ -177,10 +180,13 @@ background-size: cover;
   transform: translateX(-50%);
   height: 350px;
   transition: 0.5s;
+  
 }
 #container .cards:hover img{
   left: 80%;
   height: 400px;
+border-radius: 8px;
+
 }
 #container .cards .content{
   position: relative;
@@ -211,7 +217,15 @@ color: #254245;
 background-color: #fff;
 display: inline-block;
 padding: 10px 20px;
-margin-top: 10px;
+margin-top: 20px;
 text-decoration:none ;
 font-weight: 700;
+border-radius: 5px;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.3);
+
+
+}
+
+#container .cards .content a:hover{
+background-color: rgb(217, 219, 217);
 }

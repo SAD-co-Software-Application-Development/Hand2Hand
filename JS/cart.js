@@ -123,7 +123,7 @@ function loadDataToCart() {
 
   let tdEl6 = document.createElement('td');
   trEl1.appendChild(tdEl6);
-  tdEl6.textContent = 'TOTAL OF TOTALS'
+  tdEl6.textContent = 'Subtotal'
 
   let tdEl9 = document.createElement('td');
   trEl1.appendChild(tdEl9);
@@ -291,3 +291,21 @@ function showButtons() {
 
     
   }
+
+
+
+  let myIndex = 0;
+carousel();
+
+function carousel() {
+  let i;
+  let x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
