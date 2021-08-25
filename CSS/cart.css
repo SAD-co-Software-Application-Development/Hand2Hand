@@ -199,6 +199,10 @@ span{
     color:  white;
     
 }
+.modal-content{
+    width: 50%;
+    height: 95%;
+}
 
 .modal-content p{
  text-align: center;
