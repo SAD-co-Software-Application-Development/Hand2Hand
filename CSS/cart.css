@@ -83,7 +83,7 @@ header{
 #tableFooter td {
     padding-top: 100px;
     padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
 
 }
@@ -108,9 +108,10 @@ legend {
 
 
 #tableButton {
-    text-align: center;
+    text-align: right;
     margin-top: 30px;
     margin-bottom: 10px;
+
 }
 
 #tableButton button {
@@ -124,6 +125,7 @@ legend {
     text-decoration: none;
     transition: background 0.5s;
     font-size: 25px;
+    
 }
 #tableButton button:hover{
     background: #563434;
@@ -210,6 +212,33 @@ span{
  font-size: 25px;
  font-weight: 800;
 }
+#container{
+    display: flex;
+}
+#Adds{
+/* margin-left: 200px; */
+
+/* height: 1000px; */
+/* text-align: center; */
+margin-left: auto;
+margin-right: auto;
+}
+#sticky{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* z-index: 6; */
+  padding-top: 120px;
+}
+
+#Adds h2{
+text-align: center;
+font-size: 30px;
+margin-top: 100px;
+margin-bottom: 20px;
+font-weight: 600;
+}
+.mySlides {display:none;}
 
 
 

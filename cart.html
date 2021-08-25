@@ -45,7 +45,7 @@
             </div>
             <ul id="navList">
 
-                <a href="index.html" class ="icons">
+                <a href="index.html" class="icons">
                     <li><i class="fas fa-home"></i> HOME</li>
                 </a>
 
@@ -69,30 +69,51 @@
 
     </header>
     <main>
-        <div">
-            </div>
-            <table id="cartTable">
-                <legend>CART</legend>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
+        <div id="container">
+            <div>
 
-                </tbody>
-                <tfoot id="tableFooter">
+                <table id="cartTable">
+                    <legend>CART</legend>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
 
-                </tfoot>
-            </table>
-            <div id="tableButton">
-                <button id="cancel">Cancel</button>
-                <button id="buy">Buy</button>
+                    </tbody>
+                    <tfoot id="tableFooter">
+
+                    </tfoot>
+                </table>
+                <div id="tableButton">
+                    <button id="cancel">Cancel</button>
+                    <button id="buy">Buy</button>
+                </div>
             </div>
+            <div id="Adds">
+                <div id="sticky">
+                <!-- <h2 class="w3-center">Advertising Area</h2> -->
+
+                <div class="w3-content w3-section" style="max-width:500px">
+                    <a href="https://www.pinterest.com/pin/368169338288506072/" target="_blank"><img class="mySlides" src="https://www.velvetiere.com/wp-content/uploads/2017/11/Walamrt-Black-Friday-2017-Sales-Ads-Best-Deals-November-11th.jpg" style="width:100%"></a>
+                    <img class="mySlides" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/special-sale-ad-template-design-2cd0286a2af3ec0f1a6a98009dc155f7_screen.jpg?ts=1585987167" style="width:100%">
+                    <img class="mySlides" src="https://i.pinimg.com/originals/45/81/57/458157d4513a2a086f2e440ff4ca247a.gif" style="width:100%">
+                    <img class="mySlides" src="https://www.emailonacid.com/images/blog_images/emailmarketing/2016/animatedgifs/westelm-v3.gif" style="width:100%;height: 500px;">
+                    <img class="mySlides" src="https://i.pinimg.com/originals/32/ec/7a/32ec7ae85ccbb5dac34495c3870ba4bf.gif" style="width:100%;height: 500px;">
+
+                    
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div>
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
@@ -124,7 +145,7 @@
                                     <div class="flip-container">
                                         <button id="BTND">Done</button>
                                         <div id="flipper" class="flipper">
-                                            
+
                                             <div class="cartao cartao-front">
                                                 <div
                                                     class="flex-area j-space-between a-items-center header-cartao a-items-start">
@@ -172,12 +193,13 @@
 
                                             <div id="cartao-back" class="cartao cartao-back">
                                                 <div class="flex-area j-space-between a-items-center header-cartao">
-                                                    <img src="Images/Visa/visa.png"
-                                                        alt="Logo do seu cartão de crédito" height='30px'>
+                                                    <img src="Images/Visa/visa.png" alt="Logo do seu cartão de crédito"
+                                                        height='30px'>
                                                 </div>
 
                                                 <label>
-                                                    <h3 id="numero-do-cartao-back" class="numero-do-cartao-back"></h3>
+                                                    <h3 id="numero-do-cartao-back" class="numero-do-cartao-back">
+                                                    </h3>
                                                 </label>
 
                                                 <label>
@@ -222,6 +244,7 @@
                 </div>
 
             </div>
+        </div>
     </main>
     <footer>
         <div class="content">
