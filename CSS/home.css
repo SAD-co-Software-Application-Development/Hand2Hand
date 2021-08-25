@@ -192,13 +192,13 @@ main .aheader{
     background-image: url("../Images/Products/gloves.knitting.jpg");
     transform: rotateY( 80deg) translateZ(430px); }
   .carousel__face:nth-child(4) {
-    background-image: url("https://i.ytimg.com/vi/0jyq1213OoI/maxresdefault.jpg");
+    background-image: url("../Images/Products/pickle.food.jpg");
     transform: rotateY(120deg) translateZ(430px); }
   .carousel__face:nth-child(5) { 
-    background-image: url("https://www.arageek.com/wp-content/uploads/ibda3world/2010/04/3-1-1.jpg");
+    background-image: url("../Images/Products/snowman.woodcraft.jpg");
    transform: rotateY(160deg) translateZ(430px); }
   .carousel__face:nth-child(6) { 
-    background-image: url("../Images/Products/ring.accessories.jfif");
+    background-image: url("../Images/Products/women-purse.accessories.jfif");
    transform: rotateY(200deg) translateZ(430px); }
   .carousel__face:nth-child(7) { 
     background-image: url("../Images/Products/baby.knitting.jfif");
@@ -329,7 +329,7 @@ line-height: 40px;
       padding-left: 25px;
       padding-right: 25px;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      padding-bottom: 20px;
+      padding-bottom: 40px;
   }
 
 
