@@ -8,17 +8,19 @@
     <title>Cart</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/cart.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/cart.css">
-    <link rel="stylesheet" href="CSS/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -43,7 +45,7 @@
             </div>
             <ul id="navList">
 
-                <a href="index.html" class ="icons">
+                <a href="index.html" class="icons">
                     <li><i class="fas fa-home"></i> HOME</li>
                 </a>
 
@@ -67,30 +69,51 @@
 
     </header>
     <main>
-        <div">
-            </div>
-            <table id="cartTable">
-                <legend>CART</legend>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
+        <div id="container">
+            <div>
 
-                </tbody>
-                <tfoot id="tableFooter">
+                <table id="cartTable">
+                    <legend>CART</legend>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
 
-                </tfoot>
-            </table>
-            <div id="tableButton">
-                <button id="cancel">Cancel</button>
-                <button id="buy">Buy</button>
+                    </tbody>
+                    <tfoot id="tableFooter">
+
+                    </tfoot>
+                </table>
+                <div id="tableButton">
+                    <button id="cancel">Cancel</button>
+                    <button id="buy">Buy</button>
+                </div>
             </div>
+            <div id="Adds">
+                <div id="sticky">
+                <!-- <h2 class="w3-center">Advertising Area</h2> -->
+
+                <div class="w3-content w3-section" style="max-width:500px">
+                    <a href="https://www.pinterest.com/pin/368169338288506072/" target="_blank"><img class="mySlides" src="https://www.velvetiere.com/wp-content/uploads/2017/11/Walamrt-Black-Friday-2017-Sales-Ads-Best-Deals-November-11th.jpg" style="width:100%"></a>
+                    <img class="mySlides" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/special-sale-ad-template-design-2cd0286a2af3ec0f1a6a98009dc155f7_screen.jpg?ts=1585987167" style="width:100%">
+                    <img class="mySlides" src="https://i.pinimg.com/originals/45/81/57/458157d4513a2a086f2e440ff4ca247a.gif" style="width:100%">
+                    <img class="mySlides" src="https://www.emailonacid.com/images/blog_images/emailmarketing/2016/animatedgifs/westelm-v3.gif" style="width:100%;height: 500px;">
+                    <img class="mySlides" src="https://i.pinimg.com/originals/32/ec/7a/32ec7ae85ccbb5dac34495c3870ba4bf.gif" style="width:100%;height: 500px;">
+
+                    
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div>
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
@@ -104,27 +127,6 @@
                                     <h2>Order Summary:</h2>
                                 </div>
                                 <div id="maquininha" class="cartao maquininha">
-
-                                    
-                                    <!-- <div class="flex-area j-space-between vai-sumir">
-                                        <p>1 Carrinho HotWheels</p>
-                                        <p>R$ 230,00</p>
-                                    </div>
-
-                                    <div class="flex-area j-space-between vai-sumir">
-                                        <p>2 Lego Play Party</p>
-                                        <p>R$ 73,80</p>
-                                    </div>
-
-                                    <div class="flex-area j-space-between vai-sumir">
-                                        <p>1 God Of War</p>
-                                        <p>R$ 159,90</p>
-                                    </div>
-
-                                    <div id="total" class="total flex-area j-space-between">
-                                        <p>Total</p>
-                                        <h4>R$ 463,70</h4>
-                                    </div> -->
 
                                     <div class="loading-area">
                                         <div id="feedback-sucesso" class="feedback-sucesso">
@@ -143,7 +145,7 @@
                                     <div class="flip-container">
                                         <button id="BTND">Done</button>
                                         <div id="flipper" class="flipper">
-                                            
+
                                             <div class="cartao cartao-front">
                                                 <div
                                                     class="flex-area j-space-between a-items-center header-cartao a-items-start">
@@ -191,12 +193,13 @@
 
                                             <div id="cartao-back" class="cartao cartao-back">
                                                 <div class="flex-area j-space-between a-items-center header-cartao">
-                                                    <img src="Images/Visa/visa.png"
-                                                        alt="Logo do seu cartão de crédito" height='30px'>
+                                                    <img src="Images/Visa/visa.png" alt="Logo do seu cartão de crédito"
+                                                        height='30px'>
                                                 </div>
 
                                                 <label>
-                                                    <h3 id="numero-do-cartao-back" class="numero-do-cartao-back"></h3>
+                                                    <h3 id="numero-do-cartao-back" class="numero-do-cartao-back">
+                                                    </h3>
                                                 </label>
 
                                                 <label>
@@ -241,6 +244,7 @@
                 </div>
 
             </div>
+        </div>
     </main>
     <footer>
         <div class="content">
@@ -255,20 +259,20 @@
                     </div>
                 </div>
                 <div class="media-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
                 </div>
             </div>
             <div class="link-boxes">
                 <ul class="box">
                     <li class="link_name">Links</li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Cart</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                 </ul>
                 <ul class="box">
                     <li class="link_name">Services</li>
@@ -299,7 +303,6 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="JS/cart.js"></script> -->
 </body>
 
 </html>

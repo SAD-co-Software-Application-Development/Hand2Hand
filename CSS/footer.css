@@ -1,5 +1,4 @@
 footer{
-    /* position: fixed; */
     background: #0d1f1b;
     width: 100%;
     bottom: 0;
@@ -24,10 +23,11 @@ footer #logoH1Titel{
 width: 250px;
 }
 .content .top .media-icons a{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     margin: 0 8px;
     border-radius: 50%;
+    /* margin-top: -10px; */
     text-align: center;
     line-height: 40px;
     color: #fff;
@@ -36,35 +36,51 @@ width: 250px;
     transition: all 0.4s ease;
   }
   .top .media-icons a:nth-child(1){
-    background: #4267B2;
+    /* background: #DFEEEA;
+    color: #254245; */
+    /* margin-top: 10px; */
+    padding-top: 10px;
+
   }
   .top .media-icons a:nth-child(1):hover{
     color: #4267B2;
     background: #fff;
   }
   .top .media-icons a:nth-child(2){
-    background: #1DA1F2;
+    /* background: #DFEEEA;
+    color: #254245; */
+    padding-top: 9px;
+
   }
   .top .media-icons a:nth-child(2):hover{
     color: #1DA1F2;
     background: #fff;
   }
   .top .media-icons a:nth-child(3){
-    background: #E1306C;
+    /* background: #DFEEEA;
+    color: #254245; */
+    padding-top: 8px;
+
   }
   .top .media-icons a:nth-child(3):hover{
     color: #E1306C;
     background: #fff;
   }
   .top .media-icons a:nth-child(4){
-    background: #0077B5;
+    /* background: #DFEEEA;
+    color: #254245; */
+    padding-top: 9px;
+
   }
   .top .media-icons a:nth-child(4):hover{
     color: #0077B5;
     background: #fff;
   }
   .top .media-icons a:nth-child(5){
-    background: #FF0000;
+    /* background: #abe6d5; */
+    /* color: #254245; */
+    padding-top:8px;
+
   }
   .top .media-icons a:nth-child(5):hover{
     color: #FF0000;

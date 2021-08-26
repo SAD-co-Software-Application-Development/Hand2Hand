@@ -17,15 +17,6 @@ header{
   color: white;
 }
 
-/* #boxheader{
-  position: fixed;
-  z-index: 2;
-  background-color: white;
-  height: 90px;
-  width: 100%;
-  opacity: 0.3;
-} */
-
 #logoH1Titel{
 color: #254245; 
 }
@@ -42,7 +33,6 @@ color: #254245;
 main{
     padding-top: 5vw;
     width: 100%;
-    /* background: radial-gradient(rgb(186, 219, 198),#b6ccb4); */
 
     
 }
@@ -50,7 +40,7 @@ main{
     height: 500px;
     width: 80%;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.7;
     position: relative;
     z-index: 1;
     border-radius:30px;
@@ -95,7 +85,8 @@ main{
 
 .col-2 p{
   line-height: 25px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .btn{
@@ -144,8 +135,11 @@ main .aheader{
   .all h1{
       padding-left: 30px;
       padding-top: 30px;
+      margin-left: 50px;
       font-size: 40px;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-style: italic;
   }
 
   .container {
@@ -153,7 +147,7 @@ main .aheader{
     width: 320px;
     margin: 0px auto 0 auto;
     perspective: 1000px;
-    padding-top: 100px;
+    padding-top: 60px;
     
     
   }
@@ -189,31 +183,31 @@ main .aheader{
   
   
   .carousel__face:nth-child(1) {
-    background-image: url("https://i2.wp.com/www.tareqah.com/wp-content/uploads/2017/09/Fashion-jewelry-handmade-accessories-feather-red-string-knitted-bracelet.jpg?ssl=1");
+    background-image: url("../Images/Products/jam.food.jfif");
     transform: rotateY(  0deg) translateZ(430px); }
   .carousel__face:nth-child(2) { 
-    background-image: url("https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/14/67101/1.jpg?7288");
+    background-image: url("../Images/Products/square-plates.woodcraft.jfif");
       transform: rotateY( 40deg) translateZ(430px); }
   .carousel__face:nth-child(3) {
-    background-image: url("https://static.straitstimes.com.sg/s3fs-public/styles/article_pictrure_780x520_/public/articles/2020/12/10/ak_k1_1012.jpg?itok=BbNzgrxC&timestamp=1607585693");
+    background-image: url("../Images/Products/gloves.knitting.jpg");
     transform: rotateY( 80deg) translateZ(430px); }
   .carousel__face:nth-child(4) {
-    background-image: url("https://i.ytimg.com/vi/0jyq1213OoI/maxresdefault.jpg");
+    background-image: url("../Images/Products/pickle.food.jpg");
     transform: rotateY(120deg) translateZ(430px); }
   .carousel__face:nth-child(5) { 
-    background-image: url("https://www.arageek.com/wp-content/uploads/ibda3world/2010/04/3-1-1.jpg");
+    background-image: url("../Images/Products/snowman.woodcraft.jpg");
    transform: rotateY(160deg) translateZ(430px); }
   .carousel__face:nth-child(6) { 
-    background-image: url("https://rukminim1.flixcart.com/image/714/857/k7m8brk0/t-shirt/d/t/q/4xl-rc90tshirtwhite-roden-original-imafptpa8zgpjrrx.jpeg?q=50");
+    background-image: url("../Images/Products/women-purse.accessories.jfif");
    transform: rotateY(200deg) translateZ(430px); }
   .carousel__face:nth-child(7) { 
-    background-image: url("https://assets.ajio.com/medias/sys_master/root/20210514/T01n/609e7c45f997ddb3129e999c/-473Wx593H-461571257-blue-MODEL.jpg");
+    background-image: url("../Images/Products/scarf.knitting.jfif");
    transform: rotateY(240deg) translateZ(430px); }
   .carousel__face:nth-child(8) {
     background-image: url("https://cdn.shoplo.com/83403187/products/th640/aaa5/326-liberty-print-tana-lawn-and-silk-masks-2-1.jpeg");
     transform: rotateY(280deg) translateZ(430px); }
   .carousel__face:nth-child(9) {
-    background-image: url("https://i.pinimg.com/474x/57/ed/fb/57edfba2e5f9bb75f8835ccd3b0118b6.jpg");
+    background-image: url("../Images/Products/vase.pottery.jpg");
     transform: rotateY(320deg) translateZ(430px); }
   
   
@@ -230,8 +224,7 @@ main .aheader{
 /* ----------- for paragraph2 ---------- */
 
 .paragraph2 {
-
-    padding: 80px;
+    /* padding: 80px; */
     display: flex;
 
 }
@@ -246,20 +239,30 @@ main .aheader{
 }
 
 .FinalP h1{
-    font-size: 40px;
+    font-size: 45px;
     padding-left: 30px;
-    padding-top: 30px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    padding-top: 40px;
+font-family: Arial, Helvetica, sans-serif;   
+font-weight: 600;
+font-style: italic;
+  }
 
 #secondP{
     padding: 25px;
+    padding-top: 50px;
     font-size: 30px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+font-family: Arial, Helvetica, sans-serif;
+text-align: justify;
+line-height: 40px;
 }
 
-
+.FinalP {
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 
   
@@ -280,12 +283,11 @@ main .aheader{
   }
 
   .col-3:hover{
-    transform: scale(1.2);
+    transform: scale(1.12);
     transition: 0.5s;
   }
 
   .col-3 img:hover{
-    /* animation: shake 0.5s; */
     animation-iteration-count: infinite;      
   }
 
@@ -296,19 +298,7 @@ main .aheader{
     
   }
 
-  /* @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  } */
+ 
 
   .col-3 { 
     border: 2px #000000 solid; 
@@ -327,6 +317,7 @@ main .aheader{
     font-style: italic; 
     padding: 2px; 
     text-align: center; 
+    padding-bottom: 10px;
   }
 
 
@@ -338,6 +329,7 @@ main .aheader{
       padding-left: 25px;
       padding-right: 25px;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding-bottom: 40px;
   }
 
 
@@ -359,6 +351,10 @@ main .aheader{
 .small-container h1{
 padding-top: 35px;
     font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 50px;
 }
 
 .col-4 h4{
